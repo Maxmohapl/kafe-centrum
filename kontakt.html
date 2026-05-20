@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kontakt na KAFE CENTRUM Šumperk - Kompletni napojovy servis s.r.o., Jesenická 1198/7a, telefon, e-mail a poptávkový formulář."
+    />
+    <title>Kontakt | KAFE CENTRUM Šumperk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-contact">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="KAFE CENTRUM domů">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="logo-wordmark"><strong>Kafe</strong><small>centrum</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="index.html#sluzby">Káva a kávovary</a>
+        <a href="vendingove-automaty.html">Vending</a>
+        <a href="voda-a-aquamaty.html">Voda</a>
+        <a href="caje-a-doplnkovy-sortiment.html">Sortiment</a>
+        <a href="bytove-parfemy.html">Parfémy</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a class="header-cta" href="kontakt.html">Nezávazná poptávka</a>
+    </header>
+
+    <main>
+      <section class="page-hero contact-hero">
+        <div class="reveal">
+          <span class="page-badge">Kontakt</span>
+          <h1>Napište nám</h1>
+          <p class="page-hero-text">
+            Potřebujete servis kávovaru, poradit s výběrem, domluvit vending,
+            rozvoz vody nebo se zeptat na sortiment? Ozvěte se přímo prodejně v Šumperku.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+420608774876">Zavolat</a>
+            <a class="btn btn-secondary" href="mailto:info@kafecentrum.cz">Napsat e-mail</a>
+          </div>
+        </div>
+        <div class="page-visual reveal"><span>Jesenická 1198/7a, Šumperk</span></div>
+      </section>
+
+      <section class="contact section-grain">
+        <div class="contact-layout">
+          <form class="contact-form reveal" data-form>
+            <label>
+              Jméno
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Telefon
+              <input type="tel" name="phone" autocomplete="tel" />
+            </label>
+            <label>
+              Typ požadavku
+              <select name="request" required>
+                <option value="">Vyberte možnost</option>
+                <option>Servis kávovaru</option>
+                <option>Prodej kávovaru</option>
+                <option>Vendingový stroj</option>
+                <option>Objednávka kávy</option>
+                <option>Rozvoz vody / aquamat</option>
+                <option>Čaje a doplňkový prodej</option>
+                <option>Bytové parfémy</option>
+              </select>
+            </label>
+            <label class="full">
+              Zpráva
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn btn-primary full" type="submit">Odeslat poptávku</button>
+            <p class="form-status" data-form-status role="status"></p>
+          </form>
+
+          <aside class="contact-card reveal">
+            <h3>KAFE CENTRUM</h3>
+            <p>Kompletní nápojový servis s.r.o. Prodejna, servis a rozvoz v Šumperku.</p>
+            <dl>
+              <div>
+                <dt>Telefon</dt>
+                <dd><a href="tel:+420608774876">+420 608 774 876</a></dd>
+                <dd><a href="tel:+420775666341">+420 775 666 341</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:info@kafecentrum.cz">info@kafecentrum.cz</a></dd>
+              </div>
+              <div>
+                <dt>Adresa</dt>
+                <dd>Jesenická 1198/7a, 787 01 Šumperk</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year></span> KAFE CENTRUM. Kontakt a poptávka.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
