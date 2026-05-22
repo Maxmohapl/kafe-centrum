@@ -1044,6 +1044,10 @@ section {
   color: var(--cream);
 }
 
+.why-panel h2 {
+  line-height: 1.12;
+}
+
 .why-panel p {
   margin-bottom: 0;
 }
