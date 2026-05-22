@@ -1233,23 +1233,24 @@ section {
 }
 
 .vending-site {
-  --vending-ink: #17211d;
-  --vending-muted: #61706a;
-  --vending-green: #1f6a4d;
-  --vending-lime: #b9f06a;
-  --vending-orange: #f28b47;
-  --vending-mist: #eff6f0;
-  --vending-line: rgba(23, 33, 29, 0.12);
+  --vending-ink: #20161d;
+  --vending-muted: #755f67;
+  --vending-green: #ff6f7d;
+  --vending-lime: #25aef2;
+  --vending-orange: #ffd43d;
+  --vending-mist: #fff0f2;
+  --vending-line: rgba(32, 22, 29, 0.12);
   color: var(--vending-ink);
   background:
-    radial-gradient(circle at 12% 8%, rgba(185, 240, 106, 0.26), transparent 25%),
-    linear-gradient(135deg, #f7fbf5, #e8f1eb 46%, #fff4ea);
+    radial-gradient(circle at 12% 8%, rgba(255, 111, 125, 0.26), transparent 25%),
+    radial-gradient(circle at 86% 14%, rgba(37, 174, 242, 0.22), transparent 24%),
+    linear-gradient(135deg, #fff8f9, #ffe3e7 48%, #eef8ff);
 }
 
 .vending-site::before {
   background-image:
-    linear-gradient(rgba(31, 106, 77, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(31, 106, 77, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 111, 125, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 174, 242, 0.04) 1px, transparent 1px);
   background-size: 34px 34px;
 }
 
@@ -1262,15 +1263,15 @@ section {
   gap: 24px;
   align-items: center;
   padding: 16px clamp(18px, 4vw, 52px);
-  border-bottom: 1px solid rgba(23, 33, 29, 0.1);
-  background: rgba(247, 251, 245, 0.88);
+  border-bottom: 1px solid rgba(32, 22, 29, 0.1);
+  background: rgba(255, 246, 247, 0.9);
   backdrop-filter: blur(18px);
   transition: box-shadow 0.24s ease, background 0.24s ease;
 }
 
 .vending-header.is-scrolled {
-  background: rgba(247, 251, 245, 0.98);
-  box-shadow: 0 10px 30px rgba(23, 33, 29, 0.12);
+  background: rgba(255, 246, 247, 0.98);
+  box-shadow: 0 10px 30px rgba(255, 111, 125, 0.15);
 }
 
 .vending-brand {
@@ -1285,9 +1286,9 @@ section {
   height: 42px;
   border-radius: 12px;
   background:
-    linear-gradient(135deg, var(--vending-lime), #78d16f),
+    linear-gradient(135deg, var(--vending-green), #ff9aa3),
     var(--vending-green);
-  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.26), 0 10px 22px rgba(31, 106, 77, 0.18);
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.24), 0 10px 22px rgba(255, 111, 125, 0.22);
 }
 
 .vending-brand strong,
@@ -1337,21 +1338,21 @@ section {
 
 .vending-header-cta,
 .vending-btn-primary {
-  color: #0f1814;
-  background: linear-gradient(135deg, var(--vending-lime), #7bd96d);
-  box-shadow: 0 14px 28px rgba(31, 106, 77, 0.18);
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--vending-green), #ff9aa3);
+  box-shadow: 0 14px 28px rgba(255, 111, 125, 0.28);
 }
 
 .vending-btn-secondary {
-  color: var(--vending-green);
-  border: 1px solid rgba(31, 106, 77, 0.18);
+  color: #0d7fbd;
+  border: 1px solid rgba(37, 174, 242, 0.28);
   background: rgba(255, 255, 255, 0.7);
 }
 
 .vending-header-cta:hover,
 .vending-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 36px rgba(31, 106, 77, 0.22);
+  box-shadow: 0 18px 36px rgba(255, 111, 125, 0.26);
 }
 
 .vending-nav-toggle {
@@ -1359,7 +1360,7 @@ section {
   width: 44px;
   height: 44px;
   padding: 10px;
-  border: 1px solid rgba(31, 106, 77, 0.16);
+  border: 1px solid rgba(255, 111, 125, 0.18);
   border-radius: 12px;
   background: #ffffff;
 }
@@ -1418,81 +1419,33 @@ section {
 
 .vending-device {
   position: relative;
+  display: grid;
+  align-items: center;
   min-height: 520px;
 }
 
-.vending-machine-art {
-  position: relative;
-  width: min(100%, 450px);
-  min-height: 500px;
-  margin-left: auto;
-  border: 2px solid rgba(23, 33, 29, 0.12);
-  border-radius: 26px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.5)),
-    linear-gradient(135deg, #1f6a4d, #14241d);
-  box-shadow: 0 28px 70px rgba(23, 33, 29, 0.18);
-  overflow: hidden;
-}
-
-.vending-machine-art::before {
+.vending-device::before {
   position: absolute;
-  inset: 22px;
-  border-radius: 18px;
+  top: 5%;
+  right: 2%;
+  width: min(88%, 430px);
+  aspect-ratio: 1;
+  border-radius: 34px;
   content: "";
   background:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 22px 22px;
+    radial-gradient(circle at 78% 22%, rgba(37, 174, 242, 0.28), transparent 28%),
+    linear-gradient(135deg, rgba(255, 111, 125, 0.17), rgba(255, 255, 255, 0.54));
+  box-shadow: 0 28px 70px rgba(255, 111, 125, 0.15);
 }
 
-.machine-screen,
-.machine-panel,
-.machine-cup,
-.machine-snack {
-  position: absolute;
+.vending-machine-image {
+  position: relative;
   z-index: 1;
-  border-radius: 14px;
+  display: block;
+  width: min(100%, 520px);
+  margin: 0 0 0 auto;
+  filter: drop-shadow(0 28px 34px rgba(32, 22, 29, 0.22));
 }
-
-.machine-screen {
-  left: 36px;
-  right: 118px;
-  top: 42px;
-  height: 150px;
-  background:
-    radial-gradient(circle at 78% 28%, rgba(185, 240, 106, 0.55), transparent 28%),
-    linear-gradient(135deg, #d9f6e8, #91cab8);
-}
-
-.machine-panel {
-  right: 34px;
-  top: 42px;
-  width: 62px;
-  height: 290px;
-  background: #101b17;
-}
-
-.machine-cup {
-  left: 54px;
-  right: 54px;
-  bottom: 42px;
-  height: 88px;
-  background:
-    linear-gradient(90deg, transparent 0 12%, rgba(255, 255, 255, 0.72) 12% 88%, transparent 88%),
-    linear-gradient(135deg, var(--vending-lime), var(--vending-orange));
-}
-
-.machine-snack {
-  left: 50px;
-  width: 230px;
-  height: 54px;
-  background: rgba(255, 255, 255, 0.84);
-}
-
-.snack-one { top: 225px; }
-.snack-two { top: 292px; }
-.snack-three { top: 359px; }
 
 .vending-service-note {
   position: absolute;
@@ -1500,10 +1453,10 @@ section {
   bottom: 64px;
   width: min(78%, 330px);
   padding: 20px 22px;
-  border: 1px solid rgba(31, 106, 77, 0.12);
+  border: 1px solid rgba(255, 111, 125, 0.18);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 18px 42px rgba(23, 33, 29, 0.14);
+  box-shadow: 0 18px 42px rgba(255, 111, 125, 0.16);
   backdrop-filter: blur(14px);
 }
 
@@ -1575,7 +1528,7 @@ section {
   border: 1px solid var(--vending-line);
   border-radius: 18px;
   background: #ffffff;
-  box-shadow: 0 18px 42px rgba(23, 33, 29, 0.08);
+  box-shadow: 0 18px 42px rgba(255, 111, 125, 0.09);
 }
 
 .vending-pillar {
@@ -1590,7 +1543,7 @@ section {
   height: 44px;
   margin-bottom: 28px;
   border-radius: 50%;
-  color: #0f1814;
+  color: #ffffff;
   background: var(--vending-lime);
   font-weight: 900;
 }
@@ -1628,7 +1581,9 @@ section {
 }
 
 .vending-operation {
-  background: linear-gradient(135deg, #16231d, #233a2f);
+  background:
+    radial-gradient(circle at 84% 18%, rgba(37, 174, 242, 0.25), transparent 30%),
+    linear-gradient(135deg, #24151d, #4d202d);
 }
 
 .vending-operation-card {
@@ -1668,15 +1623,16 @@ section {
   padding: clamp(30px, 5vw, 54px);
   border-radius: 22px;
   background:
-    radial-gradient(circle at 86% 12%, rgba(185, 240, 106, 0.32), transparent 30%),
-    linear-gradient(135deg, #ffffff, #eaf3ec);
-  box-shadow: 0 22px 60px rgba(23, 33, 29, 0.1);
+    radial-gradient(circle at 86% 12%, rgba(37, 174, 242, 0.25), transparent 30%),
+    radial-gradient(circle at 12% 10%, rgba(255, 212, 61, 0.22), transparent 26%),
+    linear-gradient(135deg, #ffffff, #fff0f2);
+  box-shadow: 0 22px 60px rgba(255, 111, 125, 0.13);
 }
 
 .vending-footer {
   padding: 28px 20px;
-  color: rgba(246, 251, 244, 0.8);
-  background: #132019;
+  color: rgba(255, 246, 247, 0.82);
+  background: #20161d;
   text-align: center;
 }
 
@@ -1955,7 +1911,7 @@ textarea:focus {
   .vending-nav.is-open a {
     padding: 12px;
     border-radius: 12px;
-    background: rgba(31, 106, 77, 0.08);
+    background: rgba(255, 111, 125, 0.1);
   }
 
   .vending-hero-new,
@@ -1969,7 +1925,7 @@ textarea:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .vending-machine-art {
+  .vending-machine-image {
     margin: 0 auto;
   }
 
@@ -2099,32 +2055,9 @@ textarea:focus {
     min-height: 420px;
   }
 
-  .vending-machine-art {
-    width: min(100%, 340px);
-    min-height: 400px;
-  }
-
-  .machine-screen {
-    right: 94px;
-    height: 116px;
-  }
-
-  .machine-panel {
-    width: 50px;
-    height: 235px;
-  }
-
-  .machine-snack {
-    width: 175px;
-  }
-
-  .snack-one { top: 185px; }
-  .snack-two { top: 240px; }
-  .snack-three { top: 295px; }
-
-  .machine-cup {
-    bottom: 34px;
-    height: 70px;
+  .vending-machine-image {
+    width: min(100%, 360px);
+    margin: 0 auto;
   }
 
   .vending-service-note {
