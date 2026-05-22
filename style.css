@@ -603,7 +603,9 @@ h3 {
 
 .coffee-scene {
   position: relative;
-  width: min(100%, 470px);
+  display: grid;
+  place-items: center;
+  width: min(100%, 520px);
   aspect-ratio: 1 / 1;
   border: 1px solid rgba(81, 49, 31, 0.12);
   border-radius: 50%;
@@ -617,114 +619,18 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.machine {
-  position: absolute;
-  left: 50%;
-  top: 16%;
-  width: 48%;
-  min-width: 190px;
-  transform: translateX(-50%);
-}
-
-.machine-top {
-  height: 44px;
-  border-radius: 8px 8px 3px 3px;
-  background: linear-gradient(135deg, #1d1511, #61402b);
-}
-
-.machine-face {
+.hero-machine {
   position: relative;
-  height: 230px;
-  border-radius: 6px 6px 18px 18px;
-  background: linear-gradient(135deg, #fbf4e6, #b98a5b 52%, #3d271b);
-  box-shadow: inset 18px 0 30px rgba(255, 255, 255, 0.24), 0 24px 34px rgba(39, 22, 15, 0.18);
-}
-
-.display {
-  position: absolute;
-  left: 50%;
-  top: 28px;
-  width: 68px;
-  height: 30px;
-  border-radius: 5px;
-  background: #17100d;
-  transform: translateX(-50%);
-}
-
-.spout {
-  position: absolute;
-  left: 50%;
-  top: 82px;
-  width: 86px;
-  height: 36px;
-  border-radius: 0 0 14px 14px;
-  background: linear-gradient(180deg, #2b1b13, #110b08);
-  transform: translateX(-50%);
-}
-
-.cup {
-  position: absolute;
-  left: 50%;
-  bottom: 31px;
-  width: 116px;
-  height: 68px;
-  border-radius: 0 0 40px 40px;
-  background: linear-gradient(135deg, #fffdf8, #ead6b8);
-  transform: translateX(-50%);
-}
-
-.cup::after {
-  position: absolute;
-  right: -28px;
-  top: 14px;
-  width: 34px;
-  height: 31px;
-  border: 8px solid #ead6b8;
-  border-left: 0;
-  border-radius: 0 24px 24px 0;
-  content: "";
-}
-
-.cup span {
-  display: block;
-  height: 14px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, #2b160c, #9b6337);
-}
-
-.saucer {
-  position: absolute;
-  left: 50%;
-  bottom: 17%;
-  width: 210px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.64);
-  transform: translateX(-50%);
-}
-
-.steam {
-  position: absolute;
-  width: 14px;
-  height: 68px;
-  border-left: 3px solid rgba(255, 255, 255, 0.68);
-  border-radius: 50%;
-  animation: steam 3s ease-in-out infinite;
-}
-
-.steam-one {
-  left: 42%;
-  top: 110px;
-}
-
-.steam-two {
-  left: 53%;
-  top: 108px;
-  animation-delay: 0.55s;
+  z-index: 1;
+  width: min(106%, 540px);
+  max-width: none;
+  height: auto;
+  filter: drop-shadow(0 20px 24px rgba(39, 22, 15, 0.18));
 }
 
 .bean {
   position: absolute;
+  z-index: 0;
   width: 54px;
   height: 36px;
   border-radius: 50%;
