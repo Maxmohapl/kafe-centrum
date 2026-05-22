@@ -1393,13 +1393,14 @@ section {
 }
 
 .vending-hero-copy h1 {
-  max-width: 760px;
+  max-width: 700px;
   margin-bottom: 22px;
   color: var(--vending-ink);
   font-family: "Inter", system-ui, sans-serif;
-  font-size: clamp(3.2rem, 7.8vw, 7.2rem);
+  font-size: clamp(3.05rem, 7.1vw, 6.65rem);
   font-weight: 900;
-  line-height: 1.02;
+  line-height: 1.1;
+  text-wrap: balance;
   text-shadow: none;
   -webkit-text-stroke: 0;
 }
@@ -1420,9 +1421,9 @@ section {
 .vending-device {
   position: relative;
   display: grid;
-  align-items: center;
-  min-height: 520px;
-  transform: translateY(38px);
+  align-items: start;
+  min-height: 640px;
+  transform: translateY(28px);
 }
 
 .vending-device::before {
@@ -1443,15 +1444,16 @@ section {
   position: relative;
   z-index: 1;
   display: block;
-  width: min(100%, 520px);
+  width: min(100%, 500px);
   margin: 0 0 0 auto;
   filter: drop-shadow(0 28px 34px rgba(32, 22, 29, 0.22));
 }
 
 .vending-service-note {
   position: absolute;
-  left: 0;
-  bottom: 38px;
+  z-index: 2;
+  left: 18px;
+  bottom: 0;
   width: min(78%, 330px);
   padding: 20px 22px;
   border: 1px solid rgba(255, 111, 125, 0.18);
@@ -1931,7 +1933,8 @@ textarea:focus {
   }
 
   .vending-device {
-    transform: translateY(18px);
+    min-height: 610px;
+    transform: translateY(14px);
   }
 
   .vending-service-note {
@@ -2058,17 +2061,17 @@ textarea:focus {
   }
 
   .vending-device {
-    min-height: 420px;
+    min-height: 500px;
     transform: none;
   }
 
   .vending-machine-image {
-    width: min(100%, 360px);
+    width: min(100%, 340px);
     margin: 0 auto;
   }
 
   .vending-service-note {
-    bottom: 28px;
+    bottom: 0;
     width: min(92%, 300px);
   }
 
