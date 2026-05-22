@@ -82,13 +82,15 @@
     <circle cx="452" cy="348" r="28" fill="#e2ddd2" stroke="#111" stroke-width="5"/>
     <path d="M504 323c13-37 48-34 43 1" fill="none" stroke="#182a30" stroke-width="10" stroke-linecap="round"/>
 
-    <path d="M385 358c-2 23-2 46-9 68" stroke="#d87829" stroke-width="3" stroke-linecap="round"/>
-    <path d="M421 358c-1 26-7 49-12 72" stroke="#d87829" stroke-width="3" stroke-linecap="round"/>
     <path d="M358 414h91l-15 63h-59z" fill="#eadfd3" opacity=".86" stroke="#8e8c84" stroke-width="3"/>
-    <path d="M372 454h63l-8 23h-48z" fill="#c96921"/>
-    <circle cx="392" cy="406" r="3" fill="#d87829"/>
-    <circle cx="405" cy="433" r="3" fill="#d87829"/>
-    <circle cx="384" cy="456" r="3" fill="#d87829"/>
+    <g transform="translate(50 0)">
+      <path d="M385 358c-2 23-2 46-9 68" stroke="#d87829" stroke-width="3" stroke-linecap="round"/>
+      <path d="M421 358c-1 26-7 49-12 72" stroke="#d87829" stroke-width="3" stroke-linecap="round"/>
+      <path d="M372 454h63l-8 23h-48z" fill="#c96921"/>
+      <circle cx="392" cy="406" r="3" fill="#d87829"/>
+      <circle cx="405" cy="433" r="3" fill="#d87829"/>
+      <circle cx="384" cy="456" r="3" fill="#d87829"/>
+    </g>
 
     <path d="M101 144h394" stroke="#111" stroke-width="4"/>
     <path d="M154 42h205l-18 84H173z" fill="#9fb1b5" opacity=".86" stroke="#111" stroke-width="4"/>
