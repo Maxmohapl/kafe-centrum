@@ -280,7 +280,11 @@ textarea {
   gap: clamp(32px, 5vw, 78px);
   align-items: center;
   min-height: calc(100vh - 80px);
-  padding: clamp(56px, 9vw, 120px) clamp(18px, 4vw, 52px);
+  padding:
+    clamp(56px, 9vw, 120px)
+    clamp(18px, 4vw, 52px)
+    clamp(56px, 9vw, 120px)
+    clamp(96px, 11vw, 172px);
   overflow: hidden;
   isolation: isolate;
 }
@@ -388,9 +392,9 @@ textarea {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: min(12vw, 150px);
+  width: min(9vw, 112px);
   content: "";
-  opacity: 0.96;
+  opacity: 0.78;
   background:
     linear-gradient(rgba(22, 12, 8, 0.22) 1px, transparent 1px),
     linear-gradient(90deg, rgba(22, 12, 8, 0.22) 1px, transparent 1px),
@@ -401,7 +405,7 @@ textarea {
 
 .hero::before {
   left: 0;
-  mask-image: linear-gradient(90deg, #000 0 28%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0 18%, transparent 100%);
 }
 
 .hero::after {
@@ -424,6 +428,18 @@ textarea {
 section > * {
   position: relative;
   z-index: 1;
+}
+
+.hero-copy {
+  max-width: 760px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(255, 247, 232, 0.35);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(rgba(255, 247, 232, 0.7), rgba(255, 247, 232, 0.52)),
+    radial-gradient(circle at 0 0, rgba(217, 207, 117, 0.18), transparent 35%);
+  box-shadow: 0 24px 60px rgba(39, 22, 15, 0.12);
+  backdrop-filter: blur(2px);
 }
 
 .banner-logo {
@@ -1216,6 +1232,14 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding:
+      clamp(48px, 8vw, 86px)
+      clamp(18px, 4vw, 52px)
+      clamp(48px, 8vw, 86px)
+      clamp(54px, 7vw, 76px);
+  }
+
   .split-copy {
     justify-self: start;
   }
@@ -1262,13 +1286,17 @@ textarea:focus {
 
   .hero {
     min-height: auto;
-    padding-top: 46px;
+    padding: 46px 16px 64px;
   }
 
   .hero::before,
   .hero::after {
     width: 68px;
     opacity: 0.22;
+  }
+
+  .hero-copy {
+    padding: 18px;
   }
 
   h1 {
