@@ -518,16 +518,16 @@ h1 {
   margin-bottom: 18px;
   color: #f4f0e6;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: clamp(3.8rem, 11vw, 8.8rem);
+  font-size: clamp(3.55rem, 10vw, 8rem);
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 0.84;
+  line-height: 0.88;
   text-shadow:
-    0 2px 0 rgba(255, 255, 255, 0.24),
-    4px 5px 0 rgba(39, 22, 15, 0.72),
+    0 1px 0 rgba(255, 255, 255, 0.2),
+    3px 4px 0 rgba(39, 22, 15, 0.64),
     0 13px 26px rgba(39, 22, 15, 0.32);
   text-transform: uppercase;
-  -webkit-text-stroke: 2px rgba(39, 22, 15, 0.72);
+  -webkit-text-stroke: 0;
 }
 
 h1 span {
@@ -1300,8 +1300,7 @@ textarea:focus {
   }
 
   h1 {
-    font-size: clamp(3.1rem, 17vw, 5rem);
-    -webkit-text-stroke-width: 1px;
+    font-size: clamp(2.9rem, 16vw, 4.7rem);
   }
 
   .banner-logo {
