@@ -1232,6 +1232,458 @@ section {
     radial-gradient(ellipse at 38% 50%, #9a4a32 0 30%, transparent 31%) 0 0 / 46px 30px;
 }
 
+.vending-site {
+  --vending-ink: #17211d;
+  --vending-muted: #61706a;
+  --vending-green: #1f6a4d;
+  --vending-lime: #b9f06a;
+  --vending-orange: #f28b47;
+  --vending-mist: #eff6f0;
+  --vending-line: rgba(23, 33, 29, 0.12);
+  color: var(--vending-ink);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(185, 240, 106, 0.26), transparent 25%),
+    linear-gradient(135deg, #f7fbf5, #e8f1eb 46%, #fff4ea);
+}
+
+.vending-site::before {
+  background-image:
+    linear-gradient(rgba(31, 106, 77, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 106, 77, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.vending-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 16px clamp(18px, 4vw, 52px);
+  border-bottom: 1px solid rgba(23, 33, 29, 0.1);
+  background: rgba(247, 251, 245, 0.88);
+  backdrop-filter: blur(18px);
+  transition: box-shadow 0.24s ease, background 0.24s ease;
+}
+
+.vending-header.is-scrolled {
+  background: rgba(247, 251, 245, 0.98);
+  box-shadow: 0 10px 30px rgba(23, 33, 29, 0.12);
+}
+
+.vending-brand {
+  display: inline-flex;
+  gap: 11px;
+  align-items: center;
+  min-width: max-content;
+}
+
+.vending-brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, var(--vending-lime), #78d16f),
+    var(--vending-green);
+  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.26), 0 10px 22px rgba(31, 106, 77, 0.18);
+}
+
+.vending-brand strong,
+.vending-brand small {
+  display: block;
+  line-height: 1;
+}
+
+.vending-brand strong {
+  color: var(--vending-ink);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.vending-brand small {
+  margin-top: 3px;
+  color: var(--vending-green);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.vending-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(14px, 2.2vw, 30px);
+  color: var(--vending-muted);
+  font-size: 0.93rem;
+  font-weight: 900;
+}
+
+.vending-nav a:hover {
+  color: var(--vending-green);
+}
+
+.vending-header-cta,
+.vending-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 19px;
+  border-radius: 999px;
+  font-weight: 900;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vending-header-cta,
+.vending-btn-primary {
+  color: #0f1814;
+  background: linear-gradient(135deg, var(--vending-lime), #7bd96d);
+  box-shadow: 0 14px 28px rgba(31, 106, 77, 0.18);
+}
+
+.vending-btn-secondary {
+  color: var(--vending-green);
+  border: 1px solid rgba(31, 106, 77, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.vending-header-cta:hover,
+.vending-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(31, 106, 77, 0.22);
+}
+
+.vending-nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid rgba(31, 106, 77, 0.16);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.vending-nav-toggle span {
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--vending-ink);
+}
+
+.vending-hero-new {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.8fr);
+  gap: clamp(34px, 6vw, 86px);
+  align-items: center;
+  min-height: calc(100vh - 78px);
+  padding: clamp(62px, 9vw, 118px) clamp(18px, 5vw, 72px);
+}
+
+.vending-label,
+.vending-section-heading p,
+.vending-final-card p {
+  margin: 0 0 14px;
+  color: var(--vending-green);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vending-hero-copy h1 {
+  max-width: 840px;
+  margin-bottom: 22px;
+  color: var(--vending-ink);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(3.4rem, 8.8vw, 8.1rem);
+  font-weight: 900;
+  line-height: 0.92;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+}
+
+.vending-hero-copy p {
+  max-width: 690px;
+  color: var(--vending-muted);
+  font-size: 1.13rem;
+}
+
+.vending-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.vending-device {
+  position: relative;
+  min-height: 520px;
+}
+
+.vending-machine-art {
+  position: relative;
+  width: min(100%, 450px);
+  min-height: 500px;
+  margin-left: auto;
+  border: 2px solid rgba(23, 33, 29, 0.12);
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.5)),
+    linear-gradient(135deg, #1f6a4d, #14241d);
+  box-shadow: 0 28px 70px rgba(23, 33, 29, 0.18);
+  overflow: hidden;
+}
+
+.vending-machine-art::before {
+  position: absolute;
+  inset: 22px;
+  border-radius: 18px;
+  content: "";
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.machine-screen,
+.machine-panel,
+.machine-cup,
+.machine-snack {
+  position: absolute;
+  z-index: 1;
+  border-radius: 14px;
+}
+
+.machine-screen {
+  left: 36px;
+  right: 118px;
+  top: 42px;
+  height: 150px;
+  background:
+    radial-gradient(circle at 78% 28%, rgba(185, 240, 106, 0.55), transparent 28%),
+    linear-gradient(135deg, #d9f6e8, #91cab8);
+}
+
+.machine-panel {
+  right: 34px;
+  top: 42px;
+  width: 62px;
+  height: 290px;
+  background: #101b17;
+}
+
+.machine-cup {
+  left: 54px;
+  right: 54px;
+  bottom: 42px;
+  height: 88px;
+  background:
+    linear-gradient(90deg, transparent 0 12%, rgba(255, 255, 255, 0.72) 12% 88%, transparent 88%),
+    linear-gradient(135deg, var(--vending-lime), var(--vending-orange));
+}
+
+.machine-snack {
+  left: 50px;
+  width: 230px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.snack-one { top: 225px; }
+.snack-two { top: 292px; }
+.snack-three { top: 359px; }
+
+.vending-service-note {
+  position: absolute;
+  left: 0;
+  bottom: 64px;
+  width: min(78%, 330px);
+  padding: 20px 22px;
+  border: 1px solid rgba(31, 106, 77, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 42px rgba(23, 33, 29, 0.14);
+  backdrop-filter: blur(14px);
+}
+
+.vending-service-note strong,
+.vending-service-note span {
+  display: block;
+}
+
+.vending-service-note strong {
+  color: var(--vending-ink);
+  font-size: 1.5rem;
+}
+
+.vending-service-note span {
+  color: var(--vending-muted);
+  font-weight: 800;
+}
+
+.vending-section,
+.vending-split,
+.vending-operation,
+.vending-final-cta {
+  padding: clamp(64px, 9vw, 116px) clamp(18px, 5vw, 72px);
+}
+
+.vending-section {
+  background: #ffffff;
+}
+
+.vending-section-heading {
+  max-width: 820px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.vending-section-heading h2,
+.vending-split-copy h2,
+.vending-operation-card h2,
+.vending-final-card h2 {
+  color: var(--vending-ink);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(2.1rem, 4.8vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.vending-section-heading span,
+.vending-split-copy p,
+.vending-operation-card p {
+  color: var(--vending-muted);
+}
+
+.vending-pillar-grid,
+.vending-split,
+.vending-operation-card,
+.vending-final-card {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.vending-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.vending-pillar,
+.vending-type-card {
+  border: 1px solid var(--vending-line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(23, 33, 29, 0.08);
+}
+
+.vending-pillar {
+  min-height: 260px;
+  padding: 30px;
+}
+
+.vending-pillar span {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 28px;
+  border-radius: 50%;
+  color: #0f1814;
+  background: var(--vending-lime);
+  font-weight: 900;
+}
+
+.vending-pillar p,
+.vending-type-card p {
+  color: var(--vending-muted);
+}
+
+.vending-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.vending-type-list {
+  display: grid;
+  gap: 14px;
+}
+
+.vending-type-card {
+  padding: 26px;
+}
+
+.vending-type-card h3::before {
+  display: inline-block;
+  width: 38px;
+  height: 5px;
+  margin-right: 12px;
+  border-radius: 999px;
+  vertical-align: middle;
+  content: "";
+  background: var(--vending-orange);
+}
+
+.vending-operation {
+  background: linear-gradient(135deg, #16231d, #233a2f);
+}
+
+.vending-operation-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 28px;
+  align-items: start;
+  color: #f6fbf4;
+}
+
+.vending-operation-card h2,
+.vending-operation-card p {
+  color: #f6fbf4;
+}
+
+.vending-operation-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vending-operation-card li {
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 800;
+}
+
+.vending-final-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  padding: clamp(30px, 5vw, 54px);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(185, 240, 106, 0.32), transparent 30%),
+    linear-gradient(135deg, #ffffff, #eaf3ec);
+  box-shadow: 0 22px 60px rgba(23, 33, 29, 0.1);
+}
+
+.vending-footer {
+  padding: 28px 20px;
+  color: rgba(246, 251, 244, 0.8);
+  background: #132019;
+  text-align: center;
+}
+
+.vending-footer p {
+  margin: 0;
+}
+
 .why-panel {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -1477,6 +1929,54 @@ textarea:focus {
   .brand-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .vending-header {
+    grid-template-columns: auto auto;
+  }
+
+  .vending-nav-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .vending-nav,
+  .vending-header-cta {
+    display: none;
+  }
+
+  .vending-nav.is-open {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 4px;
+    justify-content: stretch;
+    padding-top: 8px;
+  }
+
+  .vending-nav.is-open a {
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(31, 106, 77, 0.08);
+  }
+
+  .vending-hero-new,
+  .vending-split,
+  .vending-operation-card,
+  .vending-final-card {
+    grid-template-columns: 1fr;
+  }
+
+  .vending-pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vending-machine-art {
+    margin: 0 auto;
+  }
+
+  .vending-service-note {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 680px) {
@@ -1573,6 +2073,67 @@ textarea:focus {
 
   .brand-grid span {
     min-height: 84px;
+  }
+
+  .vending-header {
+    padding: 12px 16px;
+  }
+
+  .vending-hero-new,
+  .vending-section,
+  .vending-split,
+  .vending-operation,
+  .vending-final-cta {
+    padding: 54px 16px;
+  }
+
+  .vending-hero-copy h1 {
+    font-size: clamp(2.9rem, 16vw, 4.8rem);
+  }
+
+  .vending-pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vending-device {
+    min-height: 420px;
+  }
+
+  .vending-machine-art {
+    width: min(100%, 340px);
+    min-height: 400px;
+  }
+
+  .machine-screen {
+    right: 94px;
+    height: 116px;
+  }
+
+  .machine-panel {
+    width: 50px;
+    height: 235px;
+  }
+
+  .machine-snack {
+    width: 175px;
+  }
+
+  .snack-one { top: 185px; }
+  .snack-two { top: 240px; }
+  .snack-three { top: 295px; }
+
+  .machine-cup {
+    bottom: 34px;
+    height: 70px;
+  }
+
+  .vending-service-note {
+    bottom: 28px;
+    width: min(92%, 300px);
+  }
+
+  .vending-final-card .vending-btn {
+    width: 100%;
   }
 }
 

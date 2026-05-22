@@ -16,123 +16,138 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="theme-vending">
-    <header class="site-header" data-header>
-      <a class="brand" href="index.html" aria-label="KAFE CENTRUM domů">
-        <span class="brand-mark" aria-hidden="true"><span></span></span>
-        <span class="logo-wordmark"><strong>Kafe</strong><small>centrum</small></span>
+  <body class="vending-site">
+    <header class="vending-header" data-header>
+      <a class="vending-brand" href="index.html" aria-label="KAFE CENTRUM domů">
+        <span class="vending-brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>KAFE CENTRUM</strong>
+          <small>vending servis</small>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+
+      <button class="vending-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span></span><span></span><span></span>
       </button>
-      <nav class="site-nav" id="site-nav" data-nav>
-        <a href="index.html#sluzby">Káva a kávovary</a>
-        <a href="vendingove-automaty.html">Vending</a>
-        <a href="voda-a-aquamaty.html">Voda</a>
-        <a href="caje-a-doplnkovy-sortiment.html">Sortiment</a>
-        <a href="bytove-parfemy.html">Parfémy</a>
+
+      <nav class="vending-nav" id="site-nav" data-nav>
+        <a href="#servis">Servis</a>
+        <a href="#automaty">Automaty</a>
+        <a href="#provoz">Provoz</a>
+        <a href="index.html">KAFE CENTRUM</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <a class="header-cta" href="kontakt.html">Nezávazná poptávka</a>
+
+      <a class="vending-header-cta" href="kontakt.html">Poptat servis</a>
     </header>
 
     <main>
-      <section class="page-hero vending-hero">
-        <div class="reveal">
-          <span class="page-badge">Vendingové stroje</span>
+      <section class="vending-hero-new">
+        <div class="vending-hero-copy reveal">
+          <span class="vending-label">Vendingové automaty Šumperk</span>
           <h1>Profesionální servis automatů</h1>
-          <p class="page-hero-text">
+          <p>
             Zajišťujeme prodej, servis a údržbu kávových, kombinovaných i snackových
-            automatů pro firmy, školy, sportoviště a provozy v okolí Šumperka.
+            automatů pro firmy, školy, sportoviště a provozy. Důraz na rychlou reakci,
+            pravidelnou péči a provoz bez zbytečných výpadků.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="kontakt.html">Poptat vending</a>
-            <a class="btn btn-secondary" href="#servis">Zjistit více</a>
+          <div class="vending-actions">
+            <a class="vending-btn vending-btn-primary" href="kontakt.html">Poptat vending</a>
+            <a class="vending-btn vending-btn-secondary" href="#servis">Jak servis funguje</a>
           </div>
         </div>
-        <div class="vending-hero-card reveal" aria-label="Přehled servisních služeb">
-          <span class="panel-kicker">Servisní zázemí</span>
-          <strong>Automaty bez zbytečných výpadků</strong>
-          <div class="vending-stat-grid">
-            <span><b>01</b> Prodej a instalace</span>
-            <span><b>02</b> Pravidelná údržba</span>
-            <span><b>03</b> Opravy a díly</span>
-            <span><b>04</b> Káva a směsi</span>
+        <div class="vending-device reveal" aria-label="Ilustrace vendingového automatu">
+          <div class="vending-machine-art">
+            <span class="machine-screen"></span>
+            <span class="machine-panel"></span>
+            <span class="machine-cup"></span>
+            <span class="machine-snack snack-one"></span>
+            <span class="machine-snack snack-two"></span>
+            <span class="machine-snack snack-three"></span>
+          </div>
+          <div class="vending-service-note">
+            <strong>24/7 provoz</strong>
+            <span>servis • údržba • doplnění</span>
           </div>
         </div>
       </section>
 
-      <section class="content-section" id="servis">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Servis</p>
+      <section class="vending-section" id="servis">
+        <div class="vending-section-heading reveal">
+          <p>Servisní zázemí</p>
           <h2>Spolehlivý provoz vendingových automatů</h2>
-          <p>Po dodání automatu nekončíme předáním zařízení. Pomáháme s pravidelnou péčí, servisem i doplňováním sortimentu podle provozu.</p>
+          <span>Po dodání automatu nekončíme předáním zařízení. Pomáháme s pravidelnou péčí, servisem i doplňováním sortimentu podle provozu.</span>
         </div>
-        <div class="service-pillars">
-          <article class="service-pillar reveal">
-            <span>Servis</span>
+        <div class="vending-pillar-grid">
+          <article class="vending-pillar reveal">
+            <span>01</span>
             <h3>Záruční i pozáruční péče</h3>
             <p>Technické zázemí pro kávové a prodejní automaty po celou dobu provozu.</p>
           </article>
-          <article class="service-pillar reveal">
-            <span>Reakce</span>
+          <article class="vending-pillar reveal">
+            <span>02</span>
             <h3>Rychlá domluva</h3>
             <p>Výpadek automatu znamená ztrátu komfortu i tržeb, proto řešíme závady bez zbytečných prodlev.</p>
           </article>
-          <article class="service-pillar reveal">
-            <span>Podpora</span>
+          <article class="vending-pillar reveal">
+            <span>03</span>
             <h3>Nastavení a poradenství</h3>
             <p>Pomůžeme vybrat typ automatu, sortiment, kávové směsi i režim pravidelné údržby.</p>
           </article>
         </div>
       </section>
 
-      <section class="vending-service-detail section-grain">
-        <div class="service-detail-layout">
-          <article class="service-copy reveal">
-            <p class="eyebrow">Co umíme zajistit</p>
-            <h2>Prodej, servis, údržba i repasované stroje</h2>
-            <p>KAFE CENTRUM zajišťuje vendingové řešení pro místa, kde je potřeba spolehlivá káva, nápoje nebo drobné občerstvení bez obsluhy.</p>
-            <div class="service-detail-list">
-              <div>
-                <h3>Automaty na kávu</h3>
-                <p>Pro větší provozy, sportovní zařízení, čekárny a prostory s vyšším pohybem osob.</p>
-              </div>
-              <div>
-                <h3>Kombinované automaty</h3>
-                <p>Káva, chlazené nápoje a drobné pochutiny v jednom praktickém řešení.</p>
-              </div>
-              <div>
-                <h3>Snackové automaty</h3>
-                <p>Prodejní automaty na snack a potraviny, které lze doplnit ke kávovému automatu.</p>
-              </div>
-            </div>
+      <section class="vending-split" id="automaty">
+        <div class="vending-split-copy reveal">
+          <p class="vending-label">Typy automatů</p>
+          <h2>Řešení podle místa a provozu</h2>
+          <p>KAFE CENTRUM zajišťuje vendingové řešení pro místa, kde je potřeba spolehlivá káva, nápoje nebo drobné občerstvení bez obsluhy.</p>
+        </div>
+        <div class="vending-type-list">
+          <article class="vending-type-card reveal">
+            <h3>Automaty na kávu</h3>
+            <p>Pro větší provozy, sportovní zařízení, čekárny a prostory s vyšším pohybem osob.</p>
           </article>
-          <aside class="service-checklist reveal">
-            <h3>Servisní jistoty</h3>
-            <ul class="feature-list">
+          <article class="vending-type-card reveal">
+            <h3>Kombinované automaty</h3>
+            <p>Káva, chlazené nápoje a drobné pochutiny v jednom praktickém řešení.</p>
+          </article>
+          <article class="vending-type-card reveal">
+            <h3>Snackové automaty</h3>
+            <p>Prodejní automaty na snack a potraviny, které lze doplnit ke kávovému automatu.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="vending-operation" id="provoz">
+        <div class="vending-operation-card reveal">
+          <div>
+            <p class="vending-label">Co umíme zajistit</p>
+            <h2>Prodej, servis, údržba i repasované stroje</h2>
+            <p>Dodáme automat, nastavíme provoz, doporučíme sortiment a postaráme se o servisní režim podle vytížení místa.</p>
+          </div>
+          <ul>
               <li>opravy a pravidelná údržba automatů</li>
               <li>čištění, kontrola a nastavení provozu</li>
               <li>kávové a vendingové směsi podle spotřeby</li>
               <li>možnost kvalitních repasovaných automatů</li>
               <li>řešení pro firmy, školy, sportoviště a provozy</li>
-            </ul>
-          </aside>
+          </ul>
         </div>
       </section>
 
-      <section>
-        <div class="cta-band reveal">
+      <section class="vending-final-cta">
+        <div class="vending-final-card reveal">
           <div>
-            <p class="eyebrow">Vending Šumperk</p>
+            <p>Vending Šumperk</p>
             <h2>Chcete automat do firmy nebo provozu?</h2>
           </div>
-          <a class="btn btn-primary" href="kontakt.html">Domluvit řešení</a>
+          <a class="vending-btn vending-btn-primary" href="kontakt.html">Domluvit řešení</a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="vending-footer">
       <p>© <span data-year></span> KAFE CENTRUM. Vendingové automaty a servis.</p>
     </footer>
     <script src="script.js"></script>
