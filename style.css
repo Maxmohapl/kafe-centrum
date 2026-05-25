@@ -2907,24 +2907,12 @@ textarea:focus {
   min-height: min(760px, calc(100vh - 78px));
   padding-top: clamp(46px, 5vw, 72px);
   padding-bottom: 0;
-  background:
-    linear-gradient(90deg, rgba(255, 248, 235, 0.98) 0 38%, rgba(255, 248, 235, 0.62) 52%, rgba(255, 248, 235, 0) 72%),
-    url("assets/home-hero-background.png") center right / cover no-repeat;
+  background: url("assets/home-hero-background.png") center right / cover no-repeat;
   overflow: hidden;
 }
 
 .kc-home .kc-hero::before {
-  position: absolute;
-  left: -58px;
-  top: 82px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  content: "";
-  background:
-    radial-gradient(ellipse at 55% 50%, transparent 0 36%, rgba(177, 124, 54, 0.16) 37% 48%, transparent 49%),
-    rgba(177, 124, 54, 0.08);
-  transform: rotate(28deg);
+  display: none;
 }
 
 .kc-home .kc-hero-copy {
@@ -2943,6 +2931,7 @@ textarea:focus {
   color: #2b150d;
   font-size: clamp(3rem, 4.35vw, 4.85rem);
   line-height: 1.02;
+  text-shadow: none;
 }
 
 .kc-home .kc-lead {
@@ -3341,9 +3330,7 @@ textarea:focus {
   .kc-home .kc-hero {
     padding-top: 42px;
     min-height: auto;
-    background:
-      linear-gradient(180deg, rgba(255, 248, 235, 0.98) 0 48%, rgba(255, 248, 235, 0.82) 74%, rgba(255, 248, 235, 0.34) 100%),
-      url("assets/home-hero-background.png") center bottom / cover no-repeat;
+    background: url("assets/home-hero-background.png") center bottom / cover no-repeat;
   }
 
   .kc-actions,
