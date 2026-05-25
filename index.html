@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="kc-site">
+  <body class="kc-site kc-home">
     <header class="kc-header" data-header>
       <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM domů">
         <span class="kc-brand-mark" aria-hidden="true"><span></span></span>
@@ -26,41 +26,82 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="kc-nav" id="site-nav" data-nav>
-        <a aria-current="page" href="index.html">Domů</a>
-        <a href="kavovary-a-kava.html">Kávovary a káva</a>
-        <a href="vendingove-automaty.html">Vendingové automaty</a>
+        <a href="kavovary-a-kava.html">Kávovary</a>
+        <a href="kavovary-a-kava.html#kava">Káva a čaj</a>
+        <a href="vendingove-automaty.html">Vending</a>
         <a href="vodomaty.html">Vodomaty</a>
+        <a href="kavovary-a-kava.html#servis">Servis</a>
+        <a href="#sluzby">O nás</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <a class="kc-header-cta" href="kontakt.html#poptavka">Nezávazná poptávka</a>
+      <div class="kc-header-actions">
+        <a class="kc-phone" href="tel:+420608774876">608 774 876</a>
+        <a class="kc-header-cta" href="kontakt.html#poptavka">Poptat nabídku</a>
+      </div>
     </header>
 
     <main>
       <section class="kc-hero">
         <div class="kc-hero-copy reveal">
-          <p class="kc-kicker">Lokální servisní firma pro nápoje a technologie</p>
-          <h1>Servis, prodej a provoz kávovarů, vendingu a vodomatů</h1>
+          <p class="kc-kicker">Váš partner pro kávu, občerstvení a vodu</p>
+          <h1>Prodej a servis kávovarů, vendingu a vodomatů</h1>
           <p class="kc-lead">
-            Dodáváme nové i repasované kávovary, kvalitní kávu, čaje, filtry,
-            čistící prostředky, vendingové automaty Bianchi i vodomaty Aqua Pro Active.
-            Zajišťujeme také servis, údržbu a pravidelnou sanitaci zařízení.
+            Prodáváme a servisujeme kávovary, nabízíme kvalitní kávu,
+            vendingové automaty, vodomaty, filtrační systémy a profesionální
+            čistící prostředky.
           </p>
           <div class="kc-actions">
-            <a class="kc-btn kc-btn-primary" href="kavovary-a-kava.html">Poptat kávovar</a>
-            <a class="kc-btn kc-btn-secondary" href="vendingove-automaty.html">Chci vending</a>
-            <a class="kc-btn kc-btn-light" href="vodomaty.html">Chci vodomat</a>
+            <a class="kc-btn kc-btn-primary" href="kontakt.html#poptavka">Poptat nabídku</a>
+            <a class="kc-btn kc-btn-secondary" href="#sluzby">Naše služby</a>
+            <a class="kc-btn kc-btn-light" href="kavovary-a-kava.html">Prohlédnout produkty</a>
+          </div>
+          <div class="kc-hero-features" aria-label="Hlavní výhody">
+            <div>
+              <span aria-hidden="true" class="kc-feature-icon kc-feature-coffee"></span>
+              <strong>Prémiová káva</strong>
+              <small>a špičková kvalita</small>
+            </div>
+            <div>
+              <span aria-hidden="true" class="kc-feature-icon kc-feature-service"></span>
+              <strong>Pravidelný servis</strong>
+              <small>a rychlá podpora</small>
+            </div>
+            <div>
+              <span aria-hidden="true" class="kc-feature-icon kc-feature-water"></span>
+              <strong>Sanitace a filtrace</strong>
+              <small>pro čistou vodu</small>
+            </div>
           </div>
         </div>
-        <div class="kc-hero-panel reveal" aria-label="Přehled služeb KAFE CENTRUM">
-          <img src="assets/hero-espresso-machine.png" alt="Kávovar připravující espresso" />
-          <div class="kc-hero-note">
-            <strong>Od kávy po vodu</strong>
-            <span>prodej • servis • pravidelná údržba</span>
+        <div class="kc-hero-showcase reveal" aria-label="Kávovar, vendingový automat, káva a vodomat">
+          <div class="kc-coffee-bag">
+            <span>KAFE CENTRUM</span>
+            <strong>Premium coffee</strong>
+            <small>100% arabica</small>
           </div>
+          <img class="kc-showcase-machine" src="assets/hero-espresso-machine.png" alt="Kávovar připravující espresso" />
+          <img class="kc-showcase-vending" src="assets/vending-machine.png" alt="Vendingový automat" />
+          <div class="kc-water-dispenser" aria-label="Vodomat">
+            <span></span>
+            <strong>KAFE CENTRUM</strong>
+          </div>
+          <div class="kc-beans" aria-hidden="true"></div>
         </div>
       </section>
 
-      <section class="kc-section">
+      <section class="kc-trusted" aria-label="Důvěřují nám">
+        <p>Důvěřují nám</p>
+        <div>
+          <span>ŠKODA</span>
+          <span>Česká pošta</span>
+          <span>KB</span>
+          <span>ČSOB</span>
+          <span>Johnson &amp; Johnson</span>
+          <span>Ricoh</span>
+        </div>
+      </section>
+
+      <section class="kc-section" id="sluzby">
         <div class="kc-section-heading reveal">
           <p class="kc-kicker">Co nabízíme</p>
           <h2>Jedno servisní zázemí pro kávu, vending i vodu</h2>
