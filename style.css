@@ -2915,6 +2915,10 @@ textarea:focus {
   display: none;
 }
 
+.kc-home .kc-hero::after {
+  display: none;
+}
+
 .kc-home .kc-hero-copy {
   position: relative;
   z-index: 2;
@@ -2955,9 +2959,9 @@ textarea:focus {
   padding: 16px 18px;
   border: 1px solid rgba(185, 131, 49, 0.12);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0 18px 44px rgba(49, 29, 19, 0.08);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .kc-hero-features div {
