@@ -2095,3 +2095,868 @@ textarea:focus {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Sjednocený vícestránkový web KAFE CENTRUM */
+.kc-site {
+  --kc-brown: #4d3427;
+  --kc-brown-dark: #241812;
+  --kc-cream: #f7efe2;
+  --kc-cream-2: #fffaf2;
+  --kc-card: #ffffff;
+  --kc-text: #29231f;
+  --kc-muted: #74675f;
+  --kc-line: rgba(77, 52, 39, 0.14);
+  --kc-shadow: 0 18px 48px rgba(36, 24, 18, 0.12);
+  --kc-radius: 18px;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--kc-text);
+  background:
+    linear-gradient(rgba(77, 52, 39, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 52, 39, 0.03) 1px, transparent 1px),
+    linear-gradient(135deg, var(--kc-cream-2), #f2e5d4);
+  background-size: 36px 36px, 36px 36px, auto;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.kc-water-page {
+  --kc-brown: #236d8c;
+  --kc-brown-dark: #12384a;
+  --kc-cream: #eaf7fb;
+  --kc-cream-2: #f6fcff;
+  --kc-line: rgba(35, 109, 140, 0.16);
+}
+
+.kc-site::before,
+.kc-site::after {
+  display: none;
+}
+
+.kc-site a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.kc-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 14px clamp(18px, 4vw, 56px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 250, 242, 0.9);
+  backdrop-filter: blur(18px);
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.kc-header.is-scrolled {
+  background: rgba(255, 250, 242, 0.98);
+  box-shadow: 0 12px 30px rgba(36, 24, 18, 0.1);
+}
+
+.kc-brand {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  min-width: max-content;
+}
+
+.kc-brand-mark {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ddd175;
+  box-shadow: inset 0 0 0 6px rgba(36, 24, 18, 0.12);
+}
+
+.kc-brand-mark span {
+  width: 13px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--kc-brown);
+  transform: rotate(28deg);
+}
+
+.kc-brand-text strong,
+.kc-brand-text small {
+  display: block;
+  line-height: 1;
+}
+
+.kc-brand-text strong {
+  color: var(--kc-brown-dark);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.kc-brand-text small {
+  margin-top: 4px;
+  color: var(--kc-brown);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.kc-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(14px, 2.2vw, 28px);
+  color: var(--kc-muted);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.kc-nav a {
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.kc-nav a:hover,
+.kc-nav a[aria-current="page"] {
+  color: var(--kc-brown-dark);
+  border-color: var(--kc-brown);
+}
+
+.kc-header-cta,
+.kc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.kc-header-cta,
+.kc-btn-primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--kc-brown), var(--kc-brown-dark));
+  box-shadow: 0 14px 28px rgba(77, 52, 39, 0.22);
+}
+
+.kc-btn-secondary {
+  color: var(--kc-brown-dark);
+  border: 1px solid var(--kc-line);
+  background: #ffffff;
+}
+
+.kc-btn-light {
+  color: var(--kc-brown-dark);
+  background: #efe2cf;
+}
+
+.kc-btn:hover,
+.kc-header-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(77, 52, 39, 0.2);
+}
+
+.kc-nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--kc-line);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.kc-nav-toggle span {
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--kc-brown-dark);
+}
+
+.kc-hero,
+.kc-page-hero,
+.kc-section,
+.kc-cta {
+  padding-right: clamp(18px, 5vw, 72px);
+  padding-left: clamp(18px, 5vw, 72px);
+}
+
+.kc-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.78fr);
+  gap: clamp(36px, 6vw, 90px);
+  align-items: center;
+  min-height: calc(100vh - 74px);
+  padding-top: clamp(68px, 9vw, 128px);
+  padding-bottom: clamp(68px, 9vw, 128px);
+}
+
+.kc-page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.62fr);
+  gap: clamp(34px, 6vw, 86px);
+  align-items: center;
+  padding-top: clamp(64px, 9vw, 118px);
+  padding-bottom: clamp(64px, 9vw, 118px);
+}
+
+.kc-page-hero-water {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(80, 181, 219, 0.22), transparent 28%),
+    linear-gradient(135deg, #f8fdff, #e8f7fc);
+}
+
+.kc-contact-hero {
+  min-height: 520px;
+}
+
+.kc-kicker {
+  margin: 0 0 12px;
+  color: var(--kc-brown);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kc-hero h1,
+.kc-page-hero h1,
+.kc-section-heading h2,
+.kc-cta h2 {
+  margin: 0;
+  color: var(--kc-brown-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.03;
+  letter-spacing: 0;
+}
+
+.kc-hero h1 {
+  max-width: 930px;
+  font-size: clamp(3.1rem, 7.4vw, 7rem);
+}
+
+.kc-page-hero h1 {
+  max-width: 850px;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+}
+
+.kc-lead {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: var(--kc-muted);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.kc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.kc-hero-panel,
+.kc-product-visual,
+.kc-vending-visual,
+.kc-water-visual,
+.kc-product-card-large,
+.kc-location-card-hero {
+  border: 1px solid var(--kc-line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: var(--kc-shadow);
+}
+
+.kc-hero-panel {
+  position: relative;
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.kc-hero-panel::before {
+  position: absolute;
+  inset: 24px;
+  border-radius: 24px;
+  content: "";
+  background:
+    radial-gradient(ellipse at center, rgba(77, 52, 39, 0.11) 0 32%, transparent 33%),
+    linear-gradient(135deg, rgba(247, 239, 226, 0.92), rgba(255, 255, 255, 0.4));
+  background-size: 86px 54px, auto;
+}
+
+.kc-hero-panel img,
+.kc-product-visual img,
+.kc-vending-visual img,
+.kc-product-card-large img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(82%, 430px);
+  filter: drop-shadow(0 22px 30px rgba(36, 24, 18, 0.18));
+}
+
+.kc-hero-note {
+  position: absolute;
+  z-index: 2;
+  left: 26px;
+  right: 26px;
+  bottom: 26px;
+  padding: 18px 20px;
+  border: 1px solid var(--kc-line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+.kc-hero-note strong,
+.kc-hero-note span {
+  display: block;
+}
+
+.kc-hero-note span {
+  color: var(--kc-muted);
+  font-weight: 700;
+}
+
+.kc-section {
+  padding-top: clamp(66px, 9vw, 112px);
+  padding-bottom: clamp(66px, 9vw, 112px);
+  background: #ffffff;
+}
+
+.kc-section-cream {
+  background: rgba(247, 239, 226, 0.76);
+}
+
+.kc-section-heading {
+  max-width: 820px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.kc-section-heading-left {
+  margin: 0;
+  text-align: left;
+}
+
+.kc-section-heading h2,
+.kc-cta h2 {
+  font-size: clamp(2.15rem, 4vw, 4rem);
+}
+
+.kc-section-heading p:not(.kc-kicker),
+.kc-cta p,
+.kc-service-card p,
+.kc-product-card p,
+.kc-location-card p,
+.kc-water-card p {
+  color: var(--kc-muted);
+}
+
+.kc-card-grid,
+.kc-split,
+.kc-brand-strip,
+.kc-benefit-list,
+.kc-chip-grid,
+.kc-location-grid,
+.kc-contact-layout,
+.kc-map-placeholder,
+.kc-info-band,
+.kc-cta {
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.kc-card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.kc-card-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kc-service-card,
+.kc-product-card,
+.kc-location-card,
+.kc-water-card,
+.kc-info-band,
+.kc-form,
+.kc-contact-info {
+  border: 1px solid var(--kc-line);
+  border-radius: var(--kc-radius);
+  background: var(--kc-card);
+  box-shadow: 0 12px 32px rgba(36, 24, 18, 0.08);
+}
+
+.kc-service-card,
+.kc-product-card,
+.kc-location-card,
+.kc-water-card,
+.kc-info-band {
+  padding: 28px;
+}
+
+.kc-service-card span,
+.kc-location-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 34px;
+  margin-bottom: 18px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--kc-brown);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.kc-service-card h3,
+.kc-product-card h3,
+.kc-location-card h3,
+.kc-water-card h3,
+.kc-info-band h3 {
+  margin: 0 0 12px;
+  color: var(--kc-brown-dark);
+  font-size: 1.35rem;
+  line-height: 1.18;
+}
+
+.kc-service-card a {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--kc-brown);
+  font-weight: 900;
+}
+
+.kc-brand-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.kc-brand-strip-small {
+  max-width: 680px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 28px;
+}
+
+.kc-brand-strip span {
+  display: grid;
+  min-height: 74px;
+  place-items: center;
+  border: 1px solid var(--kc-line);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--kc-brown-dark);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 900;
+  text-align: center;
+}
+
+.kc-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+}
+
+.kc-split-center {
+  align-items: center;
+}
+
+.kc-benefit-list,
+.kc-chip-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.kc-benefit-list span,
+.kc-chip-grid span {
+  padding: 15px 18px;
+  border: 1px solid var(--kc-line);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--kc-brown-dark);
+  font-weight: 800;
+}
+
+.kc-chip-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.kc-chip-grid-wide {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kc-info-band {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #fff, var(--kc-cream));
+}
+
+.kc-product-visual,
+.kc-vending-visual {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.kc-vending-visual {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255, 111, 125, 0.14), transparent 44%),
+    #ffffff;
+}
+
+.kc-vending-visual img {
+  width: min(78%, 390px);
+}
+
+.kc-product-card-large {
+  display: grid;
+  place-items: start;
+  gap: 16px;
+}
+
+.kc-product-card-large img {
+  justify-self: center;
+  width: min(70%, 270px);
+}
+
+.kc-location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.kc-water-panel {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(93, 190, 225, 0.24), transparent 26%),
+    linear-gradient(135deg, #f6fcff, #e4f6fb);
+}
+
+.kc-water-visual {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at center, rgba(80, 181, 219, 0.2), transparent 46%),
+    #ffffff;
+}
+
+.kc-water-visual span,
+.kc-water-card span {
+  display: block;
+  width: 90px;
+  height: 140px;
+  border-radius: 28px 28px 18px 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0 28%, transparent 29%),
+    linear-gradient(180deg, #7fd3ef, #2c99c1);
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.42), 0 18px 36px rgba(35, 109, 140, 0.2);
+}
+
+.kc-water-visual strong,
+.kc-water-visual small {
+  display: block;
+}
+
+.kc-water-visual strong {
+  margin-top: 20px;
+  color: var(--kc-brown-dark);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.kc-water-visual small {
+  color: var(--kc-muted);
+  font-weight: 800;
+}
+
+.kc-water-card {
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.kc-water-card span {
+  width: 70px;
+  height: 104px;
+  margin-bottom: 20px;
+}
+
+.kc-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: clamp(44px, 7vw, 88px);
+  margin-bottom: clamp(44px, 7vw, 88px);
+  padding: clamp(30px, 5vw, 54px);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(221, 209, 117, 0.28), transparent 28%),
+    linear-gradient(135deg, #ffffff, var(--kc-cream));
+  box-shadow: var(--kc-shadow);
+}
+
+.kc-cta-water {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(80, 181, 219, 0.28), transparent 30%),
+    linear-gradient(135deg, #ffffff, #e8f7fc);
+}
+
+.kc-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px clamp(18px, 5vw, 72px);
+  color: rgba(255, 250, 242, 0.84);
+  background: var(--kc-brown-dark);
+}
+
+.kc-footer p {
+  margin: 0;
+}
+
+.kc-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.kc-contact-info,
+.kc-form {
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.kc-info-list {
+  display: grid;
+  gap: 12px;
+}
+
+.kc-info-list p {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--kc-line);
+}
+
+.kc-info-list strong {
+  color: var(--kc-brown-dark);
+}
+
+.kc-info-list span {
+  color: var(--kc-muted);
+}
+
+.kc-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kc-form-note,
+.form-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--kc-muted);
+  font-size: 0.92rem;
+}
+
+.kc-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--kc-brown-dark);
+  font-weight: 800;
+}
+
+.kc-form input,
+.kc-form select,
+.kc-form textarea {
+  width: 100%;
+  border: 1px solid var(--kc-line);
+  border-radius: 12px;
+  padding: 13px 14px;
+  color: var(--kc-text);
+  background: #fffaf5;
+  font: inherit;
+}
+
+.kc-form textarea {
+  resize: vertical;
+}
+
+.kc-form-full,
+.kc-form .kc-btn {
+  grid-column: 1 / -1;
+}
+
+.kc-map-placeholder {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  padding: 34px;
+  border: 1px dashed rgba(77, 52, 39, 0.28);
+  border-radius: 24px;
+  background:
+    linear-gradient(rgba(77, 52, 39, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 52, 39, 0.05) 1px, transparent 1px),
+    #ffffff;
+  background-size: 32px 32px;
+  text-align: center;
+}
+
+.kc-map-placeholder span {
+  color: var(--kc-brown);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 1040px) {
+  .kc-header {
+    grid-template-columns: auto auto;
+  }
+
+  .kc-nav-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .kc-nav,
+  .kc-header-cta {
+    display: none;
+  }
+
+  .kc-nav.is-open {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 4px;
+    justify-content: stretch;
+    padding-top: 8px;
+  }
+
+  .kc-nav.is-open a {
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(77, 52, 39, 0.08);
+  }
+
+  .kc-hero,
+  .kc-page-hero,
+  .kc-split,
+  .kc-contact-layout,
+  .kc-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-hero-panel,
+  .kc-product-visual,
+  .kc-vending-visual,
+  .kc-water-visual {
+    min-height: 360px;
+  }
+
+  .kc-card-grid-three,
+  .kc-location-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kc-brand-strip,
+  .kc-chip-grid-wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .kc-header {
+    padding: 12px 16px;
+  }
+
+  .kc-brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .kc-brand-text strong {
+    font-size: 0.92rem;
+  }
+
+  .kc-hero,
+  .kc-page-hero,
+  .kc-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .kc-hero,
+  .kc-page-hero {
+    min-height: auto;
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .kc-hero h1,
+  .kc-page-hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3.6rem);
+  }
+
+  .kc-actions,
+  .kc-btn,
+  .kc-cta .kc-btn {
+    width: 100%;
+  }
+
+  .kc-card-grid-three,
+  .kc-location-grid,
+  .kc-brand-strip,
+  .kc-brand-strip-small,
+  .kc-chip-grid,
+  .kc-chip-grid-wide,
+  .kc-form {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-service-card,
+  .kc-product-card,
+  .kc-location-card,
+  .kc-water-card,
+  .kc-info-band,
+  .kc-contact-info,
+  .kc-form {
+    padding: 22px;
+  }
+
+  .kc-hero-panel img,
+  .kc-product-visual img {
+    width: min(86%, 320px);
+  }
+
+  .kc-vending-visual img {
+    width: min(78%, 290px);
+  }
+
+  .kc-info-list p {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .kc-footer {
+    display: grid;
+  }
+}

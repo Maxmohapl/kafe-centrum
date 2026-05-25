@@ -50,6 +50,6 @@ form?.addEventListener("submit", (event) => {
     return;
   }
 
-  formStatus.textContent = "Děkujeme. Poptávka je připravená k odeslání, v ostrém webu se napojí na e-mail nebo CRM.";
+  formStatus.textContent = "Formulář je pouze statická ukázka bez odeslání. Pro ostrý web je potřeba doplnit e-mailové nebo jiné formulářové napojení.";
   form.reset();
 });
