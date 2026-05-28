@@ -5,158 +5,522 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kávovary, servis kávovarů, káva Lu Caffé, Mäder a Coffee Limit, čaje, filtry a čistící prostředky."
+      content="Kávovary, servis, káva, čaj, filtry a čisticí chemie na jednom místě. Nové i repasované kávovary Jura, Nivona a Dr. Coffee v Šumperku."
     />
-    <title>Kávovary a káva | KAFE CENTRUM</title>
+    <title>Káva, kávovary a servis | KAFE CENTRUM</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=coffee-v3" />
   </head>
-  <body class="kc-site">
+  <body class="kc-site kc-coffee">
     <header class="kc-header" data-header>
       <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM domů">
         <span class="kc-brand-mark" aria-hidden="true"><span></span></span>
-        <span class="kc-brand-text"><strong>KAFE CENTRUM</strong><small>Šumperk</small></span>
+        <span class="kc-brand-text"><strong>kafe centrum</strong><small>Šumperk</small></span>
       </a>
       <button class="kc-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span></span><span></span><span></span>
       </button>
       <nav class="kc-nav" id="site-nav" data-nav>
         <a href="index.html">Domů</a>
-        <a aria-current="page" href="kavovary-a-kava.html">Kávovary a káva</a>
+        <a aria-current="page" href="kavovary-a-kava.html">Vše pro kávy</a>
         <a href="vendingove-automaty.html">Vendingové automaty</a>
         <a href="vodomaty.html">Vodomaty</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <a class="kc-header-cta" href="kontakt.html#poptavka">Nezávazná poptávka</a>
+      <div class="kc-header-actions">
+        <a class="kc-phone" href="tel:+420608774876">608 774 876</a>
+      </div>
     </header>
 
     <main>
-      <section class="kc-page-hero kc-page-hero-coffee">
-        <div class="reveal">
-          <p class="kc-kicker">Kávovary a káva</p>
-          <h1>Kávovary, servis a vše pro přípravu kávy</h1>
-          <p class="kc-lead">
-            Prodáváme nové i repasované kávovary značek Jura, Nivona a DR Coffee.
-            Zajišťujeme servis, pravidelnou údržbu, čištění a dodáváme kvalitní kávu,
-            čaje, filtry i čistící prostředky.
-          </p>
-          <div class="kc-actions">
-            <a class="kc-btn kc-btn-primary" href="kontakt.html#poptavka">Vybrat kávovar</a>
-            <a class="kc-btn kc-btn-secondary" href="kontakt.html#poptavka">Objednat servis</a>
+
+      <!-- ══ 1. HERO ══════════════════════════════════════════════════ -->
+      <section class="kc-vsk-hero">
+        <div class="kc-vsk-hero-inner">
+          <div class="kc-vsk-hero-copy reveal">
+            <p class="kc-vsk-kicker">Odborný prodej a servis kávovarů</p>
+            <h1 class="kc-vsk-headline">
+              <span>Prodej a</span>
+              <span>servis</span>
+              <span>kávovarů</span>
+              <span>nových i</span>
+              <span>repasovaných</span>
+            </h1>
+            <p class="kc-vsk-lead">
+              Pomůžeme vám vybrat vhodný kávovar podle provozu i rozpočtu,
+              zajistíme odborný servis a poradíme s pravidelnou údržbou.
+              V nabídce najdete nové i repasované kávovary pro domácnosti,
+              kanceláře i menší provozy.
+            </p>
+            <div class="kc-vsk-actions">
+              <a class="kc-vsk-btn kc-vsk-btn-primary" href="tel:+420608774876">608 774 876</a>
+              <a class="kc-vsk-btn kc-vsk-btn-secondary" href="#servis">Domluvit servis</a>
+              <a class="kc-vsk-btn kc-vsk-btn-tertiary" href="#kavovary">Prohlédnout kávovary</a>
+            </div>
+
+            <nav class="kc-vsk-quicklinks" aria-label="Rychlé odkazy">
+              <a href="#kava">
+                <span class="kc-vsk-ql-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L4 6v15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6l-2-4H6z" />
+                    <line x1="4" y1="6" x2="20" y2="6" />
+                    <path d="M9 10a3 3 0 0 0 6 0" />
+                  </svg>
+                </span>
+                <span>Prodej kávy</span>
+              </a>
+              <a href="#kavovary">
+                <span class="kc-vsk-ql-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="3" width="16" height="18" rx="2" />
+                    <rect x="8" y="7" width="8" height="5" rx="1" />
+                    <line x1="9" y1="16" x2="15" y2="16" />
+                  </svg>
+                </span>
+                <span>Prodej kávovarů</span>
+              </a>
+              <a href="#repas">
+                <span class="kc-vsk-ql-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 4 23 10 17 10" />
+                    <polyline points="1 20 1 14 7 14" />
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                  </svg>
+                </span>
+                <span>Repasované kávovary</span>
+              </a>
+              <a href="#servis">
+                <span class="kc-vsk-ql-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                  </svg>
+                </span>
+                <span>Servis kávovarů</span>
+              </a>
+            </nav>
+
+            <img class="kc-vsk-hero-image-mobile" src="assets/hero-kavovary.png" alt="Kávovary v showroomu Kafe Centrum" />
+
+
+            <div class="kc-vsk-brands">
+              <article class="kc-vsk-brand-card">
+                <span class="kc-vsk-brand-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2C9 6 8 9 12 13c4 4 3 7 0 9" />
+                    <path d="M17 4c-2 3-2.5 5 0 8 2.5 3 2 5 0 8" />
+                  </svg>
+                </span>
+                <div class="kc-vsk-brand-text">
+                  <h3>Jakou kávu prodáváme</h3>
+                  <p>Lu Caffé • Mäder • Coffee Limit</p>
+                  <small>prodej na pobočce</small>
+                </div>
+              </article>
+              <article class="kc-vsk-brand-card">
+                <span class="kc-vsk-brand-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="3" width="16" height="18" rx="2" />
+                    <rect x="8" y="7" width="8" height="5" rx="1" />
+                    <line x1="9" y1="16" x2="15" y2="16" />
+                  </svg>
+                </span>
+                <div class="kc-vsk-brand-text">
+                  <h3>Jaké kávovary prodáváme</h3>
+                  <p>Jura • Nivona • Dr. Coffee</p>
+                  <small>nové i repasované</small>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <div class="kc-vsk-hero-visual reveal" aria-hidden="true">
+            <img src="assets/hero-kavovary.png" alt="" />
           </div>
         </div>
-        <div class="kc-product-visual reveal">
-          <img src="assets/hero-espresso-machine.png" alt="Kávovar připravující kávu" />
+      </section>
+
+
+      <!-- ══ 2. PREMIOVÉ ZNAČKY ═══════════════════════════════════════ -->
+      <section class="kc-pb">
+        <div class="kc-pb-inner">
+
+          <!-- Intro: label + heading + text (left) | showroom image (right) -->
+          <div class="kc-pb-intro">
+            <div class="kc-pb-intro-left reveal">
+              <div class="kc-pb-label">
+                <span class="kc-pb-label-text">Premiové značky</span>
+                <span class="kc-pb-label-line" aria-hidden="true"></span>
+              </div>
+              <h2 class="kc-pb-heading">Prodáváme kávovary prémiových značek</h2>
+              <p class="kc-pb-intro-text">Na naší pobočce Vám představíme kvalitní kávovary od ověřených výrobců, se kterými máme dlouholeté zkušenosti. Pomůžeme Vám vybrat vhodné řešení pro domácnost, kancelář i provoz a poradíme s výběrem modelu, který bude odpovídat Vašim potřebám i způsobu používání.</p>
+            </div>
+            <div class="kc-pb-intro-right reveal">
+              <img class="kc-pb-intro-img" src="assets/prodejna-kafe-centrum.png" alt="Kávovary v showroomu Kafe Centrum" />
+            </div>
+          </div>
+
+          <!-- Brand cards -->
+          <div class="kc-pb-cards">
+            <article class="kc-pb-card reveal">
+              <div class="kc-pb-logo">
+                <img class="kc-pb-brand-logo" src="assets/logo-jura.png" alt="Jura" />
+              </div>
+              <div class="kc-pb-card-divider" aria-hidden="true"></div>
+              <p>Špičkové automatické kávovary známé důrazem na kvalitu, design a pohodlnou přípravu kávy.</p>
+            </article>
+            <article class="kc-pb-card reveal">
+              <div class="kc-pb-logo">
+                <img class="kc-pb-brand-logo" src="assets/logo-nivona.png" alt="Nivona" />
+              </div>
+              <div class="kc-pb-card-divider" aria-hidden="true"></div>
+              <p>Oblíbené kávovary s výborným poměrem mezi funkcemi, kvalitou a každodenním komfortem používání.</p>
+            </article>
+            <article class="kc-pb-card reveal">
+              <div class="kc-pb-logo">
+                <img class="kc-pb-brand-logo" src="assets/logo-drcoffee.png" alt="Dr. Coffee" />
+              </div>
+              <div class="kc-pb-card-divider" aria-hidden="true"></div>
+              <p>Moderní řešení pro domácnosti i firmy, která nabízejí spolehlivý provoz a profesionální výsledek.</p>
+            </article>
+          </div>
+
+          <!-- Repasované kávovary block -->
+          <div class="kc-repas reveal" id="repas">
+
+            <!-- Left: label + heading + text + features + CTA bar -->
+            <div class="kc-repas-left">
+              <div class="kc-pb-label">
+                <span class="kc-pb-label-text">Repasované kávovary</span>
+                <span class="kc-pb-label-line" aria-hidden="true"></span>
+              </div>
+              <h2 class="kc-repas-heading">Kvalitní repasované kávovary za výhodnější cenu</h2>
+              <p class="kc-repas-text">Každý repasovaný kávovar prochází pečlivou kontrolou, odborným servisem a testováním. Získáte spolehlivý stroj s jistotou kvality a za příznivější cenu.</p>
+
+              <div class="kc-repas-features">
+                <div class="kc-repas-feature">
+                  <div class="kc-repas-feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#c0891e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <polyline points="9 12 11 14 15 10"/>
+                    </svg>
+                  </div>
+                  <p>Prověřený technický stav</p>
+                </div>
+                <div class="kc-repas-feature">
+                  <div class="kc-repas-feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#c0891e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2l1.8 5.5H19l-4.5 3.3 1.7 5.2L12 13l-4.2 3 1.7-5.2L5 7.5h5.2z"/>
+                      <line x1="5" y1="3" x2="4" y2="6" stroke-width="1.2"/>
+                      <line x1="19" y1="3" x2="20" y2="6" stroke-width="1.2"/>
+                      <line x1="3" y1="9" x2="0.5" y2="10" stroke-width="1.2"/>
+                      <line x1="21" y1="9" x2="23.5" y2="10" stroke-width="1.2"/>
+                    </svg>
+                  </div>
+                  <p>Vyčištěné a připravené k provozu</p>
+                </div>
+                <div class="kc-repas-feature">
+                  <div class="kc-repas-feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#c0891e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                      <line x1="7" y1="7" x2="7.01" y2="7" stroke-width="2.5"/>
+                    </svg>
+                  </div>
+                  <p>Výhodnější cena</p>
+                </div>
+              </div>
+
+              <div class="kc-repas-cta-bar">
+                <svg class="kc-repas-botanical" viewBox="0 0 72 96" width="72" height="96" fill="none" aria-hidden="true">
+                  <path d="M36 92 C36 72, 36 52, 36 32" stroke="#c0891e" stroke-width="1.1" opacity="0.35"/>
+                  <path d="M36 72 C26 62, 12 58, 8 47 C18 46, 30 53, 36 65Z" fill="rgba(192,137,30,0.1)" stroke="#c0891e" stroke-width="0.9" opacity="0.45"/>
+                  <path d="M36 55 C46 45, 60 41, 64 30 C54 29, 42 36, 36 48Z" fill="rgba(192,137,30,0.1)" stroke="#c0891e" stroke-width="0.9" opacity="0.45"/>
+                  <path d="M36 85 C28 78, 18 79, 14 72 C22 68, 33 73, 36 83Z" fill="rgba(192,137,30,0.08)" stroke="#c0891e" stroke-width="0.8" opacity="0.35"/>
+                  <path d="M36 40 C44 32, 54 34, 58 26 C50 22, 40 28, 36 38Z" fill="rgba(192,137,30,0.07)" stroke="#c0891e" stroke-width="0.8" opacity="0.3"/>
+                </svg>
+                <p class="kc-repas-cta-text">I výhodnější varianta může být stylová, spolehlivá a připravená na každodenní provoz.</p>
+              </div>
+            </div>
+
+            <!-- Right: large showroom photo with floating badge -->
+            <div class="kc-repas-right">
+              <img src="assets/repasovanefoto.png" alt="Repasované kávovary v showroomu Kafe Centrum" />
+              <div class="kc-repas-badge">
+                <div class="kc-repas-badge-icon" aria-hidden="true">
+                  <svg viewBox="0 0 40 40" width="38" height="38" fill="none" stroke="#c0891e" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 28 C5 24, 4 17, 7 11 C9 7, 12 6, 14 8" opacity="0.7"/>
+                    <path d="M30 28 C35 24, 36 17, 33 11 C31 7, 28 6, 26 8" opacity="0.7"/>
+                    <polygon points="20 7 22.4 14.2 30 14.2 24 18.5 26.4 25.8 20 21.5 13.6 25.8 16 18.5 10 14.2 17.6 14.2" fill="rgba(192,137,30,0.14)"/>
+                  </svg>
+                </div>
+                <p class="kc-repas-badge-title">Pečlivě vybrané stroje</p>
+                <div class="kc-repas-badge-divider" aria-hidden="true"></div>
+                <p class="kc-repas-badge-text">Repasované s důrazem na kvalitu</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
+
+      <!-- ══ 4. NOVÉ I REPASOVANÉ KÁVOVARY ════════════════════════════ -->
       <section class="kc-section">
-        <div class="kc-section-heading reveal">
-          <p class="kc-kicker">Prodej kávovarů</p>
-          <h2>Stroj podle provozu, rozpočtu a počtu šálků</h2>
-        </div>
-        <div class="kc-card-grid kc-card-grid-three">
-          <article class="kc-service-card reveal">
-            <h3>Nové kávovary</h3>
-            <p>Spolehlivé řešení pro domácnosti, kanceláře, firmy i menší provozovny.</p>
-          </article>
-          <article class="kc-service-card reveal">
-            <h3>Repasované kávovary</h3>
-            <p>Cenově dostupnější varianta se zkontrolovaným technickým stavem.</p>
-          </article>
-          <article class="kc-service-card reveal">
-            <h3>Profesionální kávovary</h3>
-            <p>Řešení pro větší provozy, kanceláře, recepce a zákaznické prostory.</p>
-          </article>
-        </div>
-        <div class="kc-brand-strip kc-brand-strip-small reveal" aria-label="Značky kávovarů">
-          <span>Jura</span><span>Nivona</span><span>DR Coffee</span>
-        </div>
-      </section>
-
-      <section class="kc-section kc-section-cream" id="servis">
-        <div class="kc-split">
+        <div class="kc-kavovary-layout">
           <div class="kc-section-heading kc-section-heading-left reveal">
-            <p class="kc-kicker">Servis a údržba</p>
-            <h2>Odborný servis a údržba kávovarů</h2>
+            <p class="kc-kicker">Kávovary</p>
+            <h2>Nové i repasované kávovary</h2>
             <p>
-              Zajišťujeme odborný servis a údržbu kávovarů, aby zařízení fungovalo
-              spolehlivě a připravovaná káva měla stále vysokou kvalitu.
+              Pomůžeme vám vybrat kávovar podle toho, kolik kávy denně připravujete,
+              jaké nápoje chcete a jak jednoduchou údržbu očekáváte. V nabídce najdete
+              nové modely i ověřené repasované kávovary.
             </p>
           </div>
-          <div class="kc-chip-grid reveal">
-            <span>diagnostika závad</span>
-            <span>odvápnění</span>
-            <span>čištění kávovaru</span>
-            <span>výměna filtrů</span>
-            <span>pravidelná údržba</span>
-            <span>nastavení a kontrola zařízení</span>
-            <span>doporučení vhodné chemie a péče</span>
+          <div class="kc-kavovary-cards">
+            <article class="kc-service-card reveal">
+              <h3>Nové kávovary</h3>
+              <p class="kc-machine-card-intro">Ideální volba pro zákazníky, kteří chtějí aktuální model, plnou záruku a řešení přesně podle svých potřeb.</p>
+              <ul class="kc-card-list">
+                <li>Aktuální modely v naší nabídce</li>
+                <li>Záruka a záruční servis</li>
+                <li>Vhodné pro domácnosti, firmy i provozy</li>
+                <li>Poradenství s výběrem modelu</li>
+                <li>Doporučení podle denní spotřeby kávy</li>
+              </ul>
+            </article>
+            <article class="kc-service-card reveal">
+              <h3>Repasované kávovary</h3>
+              <p class="kc-machine-card-intro">Výhodnější cesta ke kvalitnímu kávovaru. Repasované stroje jsou zkontrolované a vhodné pro zákazníky, kteří chtějí spolehlivé řešení za lepší cenu.</p>
+              <ul class="kc-card-list">
+                <li>Výhodnější cena oproti novému stroji</li>
+                <li>Zkontrolovaný technický stav</li>
+                <li>Vhodné pro domácnosti i kanceláře</li>
+                <li>Dobrý poměr cena / výkon</li>
+                <li>Doporučení podle aktuální dostupnosti</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="kc-section" id="kava">
+      <!-- ══ 5. ZNAČKY KÁVOVARŮ ════════════════════════════════════════ -->
+      <section class="kc-section kc-section-cream">
         <div class="kc-section-heading reveal">
-          <p class="kc-kicker">Káva a čaje</p>
-          <h2>Káva a čaje pro firmy, provozy i domácnosti</h2>
+          <p class="kc-kicker">Značky</p>
+          <h2>Značky kávovarů, se kterými pracujeme</h2>
+        </div>
+        <div class="kc-card-grid kc-card-grid-three">
+          <article class="kc-coffee-brand-card reveal">
+            <span class="kc-brand-marker" aria-hidden="true"></span>
+            <h3>Jura</h3>
+            <p>Prémiové automatické kávovary pro zákazníky, kteří chtějí komfort, kvalitu a elegantní zpracování.</p>
+          </article>
+          <article class="kc-coffee-brand-card reveal">
+            <span class="kc-brand-marker" aria-hidden="true"></span>
+            <h3>Nivona</h3>
+            <p>Oblíbené automatické kávovary s dobrým poměrem výkonu, jednoduchosti a výsledné chuti kávy.</p>
+          </article>
+          <article class="kc-coffee-brand-card reveal">
+            <span class="kc-brand-marker" aria-hidden="true"></span>
+            <h3>Dr. Coffee</h3>
+            <p>Výkonné řešení vhodné pro kanceláře, firmy a provozy s vyšší denní spotřebou kávy.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ══ 6. BRAND SHOWOFF KÁVY ════════════════════════════════════ -->
+      <section class="kc-section kc-section-espresso">
+        <div class="kc-section-heading reveal">
+          <p class="kc-kicker">Káva</p>
+          <h2>Kávy, které stojí za výběr</h2>
           <p>
-            Prodáváme kávu ověřených značek vhodnou pro každodenní použití
-            v kancelářích, provozovnách, kavárnách i domácnostech.
+            V nabídce najdete pečlivě vybrané kávy pro každodenní přípravu doma,
+            v kanceláři i v provozu. Poradíme vám s výběrem podle chuti, typu
+            kávovaru i způsobu přípravy.
           </p>
         </div>
         <div class="kc-card-grid kc-card-grid-three">
-          <article class="kc-product-card reveal">
+          <article class="kc-coffee-brand-card reveal">
+            <span class="kc-brand-marker" aria-hidden="true"></span>
             <h3>Lu Caffé</h3>
-            <p>Prémiová italská káva s plnou chutí.</p>
+            <p>Italský styl kávy s plným tělem, výraznou vůní a chutí, která se skvěle hodí do automatických i pákových kávovarů.</p>
           </article>
-          <article class="kc-product-card reveal">
+          <article class="kc-coffee-brand-card reveal">
+            <span class="kc-brand-marker" aria-hidden="true"></span>
             <h3>Mäder</h3>
-            <p>Káva vhodná pro kanceláře, gastro provozy a pravidelné zásobování.</p>
+            <p>Káva s důrazem na vyváženou chuť, jemnost a spolehlivý výsledek při každodenní přípravě.</p>
           </article>
-          <article class="kc-product-card reveal">
+          <article class="kc-coffee-brand-card reveal">
+            <span class="kc-brand-marker" aria-hidden="true"></span>
             <h3>Coffee Limit</h3>
-            <p>Kvalitní káva pro každodenní přípravu.</p>
+            <p>Kávy pro ty, kteří chtějí objevovat různé chuťové profily a vybrat si směs přesně podle svého stylu.</p>
           </article>
         </div>
-        <aside class="kc-info-band reveal">
-          <h3>Čaje a doplňkový sortiment</h3>
-          <p>Doplňkově nabízíme také čaje pro firmy, čekárny, kanceláře a provozovny.</p>
-        </aside>
+        <p class="kc-coffee-brand-note reveal">
+          Každá káva má jiný charakter. Někomu sedí silnější espresso s výrazným tělem,
+          jiný preferuje jemnější a krémovější chuť. Rádi vám poradíme, která káva bude
+          fungovat právě ve vašem kávovaru.
+        </p>
       </section>
 
-      <section class="kc-section kc-section-cream">
+      <!-- ══ 7. ČAJE ══════════════════════════════════════════════════ -->
+      <section class="kc-section">
+        <div class="kc-split kc-split-center">
+          <div class="kc-section-heading kc-section-heading-left reveal">
+            <p class="kc-kicker">Čaje a doplňky</p>
+            <h2>Čaje a doplňkový sortiment</h2>
+            <p>
+              Kromě kávy u nás najdete také výběr čajů a doplňkového sortimentu
+              pro domácnosti, kanceláře i provozy. Pokud hledáte něco ke kávovému
+              koutku nebo občerstvení pro zákazníky a zaměstnance, rádi vám
+              poradíme s výběrem.
+            </p>
+            <a class="kc-btn kc-btn-secondary kc-servis-cta" href="tel:+420608774876">Zeptat se na sortiment</a>
+          </div>
+          <div class="kc-benefit-list reveal">
+            <span>Čaje pro domácnosti</span>
+            <span>Čaje do kanceláří</span>
+            <span>Doplňkový sortiment ke kávovému koutku</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ 8. SERVIS ════════════════════════════════════════════════ -->
+      <section class="kc-section kc-section-cream" id="servis">
+        <div class="kc-split kc-split-center">
+          <div class="kc-section-heading kc-section-heading-left reveal">
+            <p class="kc-kicker">Servis</p>
+            <h2>Servis a údržba kávovarů</h2>
+            <p>
+              Kávovar zkontrolujeme, vyčistíme a podle problému navrhneme další postup.
+              Řešíme běžné závady, zanesení, problémy s vodou, mléčným systémem
+              i pravidelnou údržbu.
+            </p>
+            <a class="kc-btn kc-btn-primary kc-servis-cta" href="tel:+420608774876">Chci domluvit servis</a>
+          </div>
+          <div class="kc-service-chip-grid reveal">
+            <div class="kc-service-chip">
+              <div class="kc-service-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </div>
+              <span>Diagnostika závady</span>
+            </div>
+            <div class="kc-service-chip">
+              <div class="kc-service-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+              </div>
+              <span>Čištění a odvápnění</span>
+            </div>
+            <div class="kc-service-chip">
+              <div class="kc-service-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <span>Opravy kávovarů</span>
+            </div>
+            <div class="kc-service-chip">
+              <div class="kc-service-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                  <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                </svg>
+              </div>
+              <span>Výměna opotřebených dílů</span>
+            </div>
+            <div class="kc-service-chip">
+              <div class="kc-service-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <span>Pravidelná servisní údržba</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ 9. FILTRY A CHEMIE ════════════════════════════════════════ -->
+      <section class="kc-section">
         <div class="kc-section-heading reveal">
           <p class="kc-kicker">Údržba</p>
-          <h2>Filtry, odvápnění a čistící prostředky</h2>
+          <h2>Filtry, čisticí chemie a příslušenství</h2>
           <p>
-            Dodáváme filtry do kávovarů, čistící tablety, odvápňovací prostředky
-            a přípravky proti usazování vodního kamene. Správná údržba pomáhá
-            prodloužit životnost kávovaru a udržet kvalitu připravované kávy.
+            Správný filtr a pravidelné čištění pomáhají prodloužit životnost kávovaru
+            a zlepšit chuť kávy. V prodejně vám poradíme, co je vhodné právě pro
+            váš typ kávovaru.
           </p>
         </div>
         <div class="kc-chip-grid kc-chip-grid-wide reveal">
-          <span>vodní filtry</span>
-          <span>čistící tablety</span>
-          <span>odvápňovací prostředky</span>
-          <span>přípravky proti vodnímu kameni</span>
-          <span>pravidelná údržba kávovarů</span>
+          <span>Vodní filtry</span>
+          <span>Čisticí tablety</span>
+          <span>Odvápňovače</span>
+          <span>Čističe mléčných cest</span>
+          <span>Kartáčky a pomůcky na čištění</span>
+          <span>Další příslušenství</span>
+        </div>
+        <aside class="kc-info-band reveal">
+          <h3>Nevíte, jaký filtr nebo čisticí prostředek potřebujete?</h3>
+          <p>Stačí znát značku a model kávovaru, případně přinést starý filtr nebo fotku štítku. Pomůžeme vám vybrat správné příslušenství.</p>
+        </aside>
+      </section>
+
+      <!-- ══ 10. PORADENSKÝ CTA BLOK ══════════════════════════════════ -->
+      <section class="kc-cta reveal">
+        <div>
+          <p class="kc-kicker">Poradenství</p>
+          <h2>Nevíte, co vybrat? Poradíme.</h2>
+          <p>
+            Ať vybíráte kávovar, kávu, filtr nebo řešíte servis, nemusíte se
+            v tom vyznat sami. Řeknete nám, co od kávovaru očekáváte, a doporučíme
+            řešení, které bude dávat smysl pro domácnost, kancelář nebo provoz.
+          </p>
+        </div>
+        <div class="kc-cta-actions">
+          <a class="kc-btn kc-btn-primary" href="tel:+420608774876">Zavolat pro radu</a>
+          <a class="kc-btn kc-btn-secondary" href="kontakt.html">Zastavit se na prodejně</a>
         </div>
       </section>
 
-      <section class="kc-cta reveal">
-        <div>
-          <p class="kc-kicker">Pomůžeme s výběrem</p>
-          <h2>Nevíte, jaký kávovar nebo kávu vybrat?</h2>
-          <p>Pomůžeme vám zvolit vhodné řešení podle počtu šálků za den, typu provozu a rozpočtu.</p>
+      <!-- ══ 11. KONTAKT ══════════════════════════════════════════════ -->
+      <section class="kc-section kc-section-cream">
+        <div class="kc-section-heading reveal">
+          <p class="kc-kicker">Kontakt</p>
+          <h2>Zastavte se u nás nebo se ozvěte</h2>
         </div>
-        <a class="kc-btn kc-btn-primary" href="kontakt.html#poptavka">Poptat řešení</a>
+        <div class="kc-contact-layout">
+          <div class="kc-contact-info reveal">
+            <div class="kc-info-list">
+              <p><strong>Telefon</strong><span><a href="tel:+420608774876">+420 608 774 876</a></span></p>
+              <p><strong>E-mail</strong><span>info@kafecentrum.cz</span></p>
+              <p><strong>Adresa</strong><span>Jesenická 1198/7a, Šumperk</span></p>
+              <p><strong>Otevírací doba</strong><span>po domluvě</span></p>
+            </div>
+            <div class="kc-contact-btns">
+              <a class="kc-btn kc-btn-primary" href="tel:+420608774876">Zavolat</a>
+              <a class="kc-btn kc-btn-secondary" href="https://maps.google.com/?q=Jesenická+1198%2F7a,+Šumperk" target="_blank" rel="noopener">Navigovat</a>
+            </div>
+          </div>
+          <div class="kc-map-placeholder reveal">
+            <span>Mapa</span>
+            <h2>Jesenická 1198/7a, Šumperk</h2>
+            <p>Sem je možné vložit mapu provozovny nebo odkaz na mapové podklady.</p>
+          </div>
+        </div>
       </section>
+
     </main>
 
     <footer class="kc-footer">

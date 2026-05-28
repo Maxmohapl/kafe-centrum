@@ -3,8 +3,7 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const revealItems = document.querySelectorAll(".reveal");
 const year = document.querySelector("[data-year]");
-const form = document.querySelector("[data-form]");
-const formStatus = document.querySelector("[data-form-status]");
+const brandButtons = document.querySelectorAll("[data-brand-button]");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -29,6 +28,15 @@ nav?.addEventListener("click", (event) => {
   }
 });
 
+brandButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const isActive = button.getAttribute("aria-pressed") === "true";
+
+    button.classList.toggle("is-active", !isActive);
+    button.setAttribute("aria-pressed", String(!isActive));
+  });
+});
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -42,14 +50,3 @@ const observer = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => observer.observe(item));
-
-form?.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  if (!formStatus) {
-    return;
-  }
-
-  formStatus.textContent = "Formulář je pouze statická ukázka bez odeslání. Pro ostrý web je potřeba doplnit e-mailové nebo jiné formulářové napojení.";
-  form.reset();
-});
