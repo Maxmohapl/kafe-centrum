@@ -3556,7 +3556,7 @@ textarea:focus {
   min-height: min(760px, calc(100vh - 78px));
   padding-top: clamp(46px, 5vw, 72px);
   padding-bottom: 0;
-  background: url("assets/home-hero-background.png") center right / cover no-repeat;
+  background: url("assets/hero-uvod.png") center right / cover no-repeat;
   overflow: hidden;
 }
 
@@ -4483,7 +4483,7 @@ textarea:focus {
   .kc-home .kc-hero {
     padding-top: 42px;
     min-height: auto;
-    background: url("assets/home-hero-background.png") center bottom / cover no-repeat;
+    background: url("assets/hero-uvod.png") center bottom / cover no-repeat;
   }
 
   .kc-actions,
@@ -4690,8 +4690,9 @@ textarea:focus {
   position: relative;
   overflow: hidden;
   padding: 0;
-  min-height: min(820px, calc(100vh - 80px));
-  background: url("assets/hero-kavovar.png") center top / cover no-repeat;
+  margin-top: -78px;
+  min-height: 100vh;
+  background: url("assets/hero-kavservis.png") center top / cover no-repeat;
   background-color: #fbf5ea;
 }
 
@@ -4700,7 +4701,7 @@ textarea:focus {
   z-index: 1;
   max-width: 1510px;
   margin: 0 auto;
-  padding: 81px clamp(18px, 5vw, 72px) 36px;
+  padding: calc(78px + 81px) clamp(18px, 5vw, 72px) 48px;
 }
 
 .kc-vsk-hero-copy {
@@ -4721,11 +4722,11 @@ textarea:focus {
 }
 
 .kc-vsk-headline {
-  margin: 0 0 20px;
-  max-width: 600px;
+  margin: 0 0 16px;
+  max-width: 560px;
   color: #24110b;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(2.8rem, 4.35vw, 4.85rem);
+  font-size: clamp(2.2rem, 3.4vw, 3.8rem);
   font-weight: 900;
   line-height: 1.02;
   letter-spacing: -0.02em;
@@ -4738,10 +4739,10 @@ textarea:focus {
 }
 
 .kc-vsk-lead {
-  max-width: 560px;
-  margin: 0 0 24px;
+  max-width: 520px;
+  margin: 0 0 20px;
   color: #59483f;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-size: clamp(0.92rem, 1.3vw, 1.05rem);
   font-weight: 500;
   line-height: 1.55;
 }
@@ -5199,8 +5200,12 @@ textarea:focus {
    ══════════════════════════════════════════════════════════════ */
 
 .kc-pb {
-  padding: 82px clamp(18px, 5vw, 72px) 92px;
+  position: relative;
+  z-index: 2;
+  margin-top: -52px;
+  padding: 72px clamp(18px, 5vw, 72px) 92px;
   background: #f5ede0;
+  border-radius: 52px 52px 0 0;
 }
 
 .kc-pb-inner {
@@ -8429,7 +8434,7 @@ textarea:focus {
   overflow: visible;
   padding: 0;
   min-height: min(600px, 100vh);
-  background: url("assets/coffee-beans-bg.png") center 82% / cover no-repeat;
+  background: url("assets/hero-káva.png") center 82% / cover no-repeat;
   background-color: #d6b387;
   display: flex;
   align-items: flex-start;
