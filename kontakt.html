@@ -14,25 +14,28 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=phone-contact-v1" />
   </head>
   <body class="kc-site">
     <header class="kc-header" data-header>
       <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM domů">
         <span class="kc-brand-mark" aria-hidden="true"><span></span></span>
-        <span class="kc-brand-text"><strong>KAFE CENTRUM</strong><small>Šumperk</small></span>
+        <span class="kc-brand-text"><strong>kafe centrum</strong><small>Šumperk</small></span>
       </a>
       <button class="kc-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span></span><span></span><span></span>
       </button>
       <nav class="kc-nav" id="site-nav" data-nav>
         <a href="index.html">Domů</a>
-        <a href="kavovary-a-kava.html">Kávovary a káva</a>
+        <a href="kavovary-a-kava.html">Vše pro kávy</a>
+        <a href="kava.html">Káva</a>
         <a href="vendingove-automaty.html">Vendingové automaty</a>
         <a href="vodomaty.html">Vodomaty</a>
         <a aria-current="page" href="kontakt.html">Kontakt</a>
       </nav>
-      <a class="kc-header-cta" href="#poptavka">Nezávazná poptávka</a>
+      <div class="kc-header-actions">
+        <a class="kc-phone" href="tel:+420608774876">608 774 876</a>
+      </div>
     </header>
 
     <main>
@@ -52,7 +55,7 @@
         </div>
       </section>
 
-      <section class="kc-section" id="poptavka">
+      <section class="kc-section" id="kontakt">
         <div class="kc-contact-layout">
           <div class="kc-contact-info reveal">
             <div class="kc-section-heading kc-section-heading-left">
@@ -60,7 +63,7 @@
               <h2>Domluvte si řešení pro váš provoz</h2>
             </div>
             <div class="kc-info-list">
-              <p><strong>Telefon</strong><span>+420 608 774 876</span></p>
+              <p><strong>Telefon</strong><span><a href="tel:+420608774876">+420 608 774 876</a></span></p>
               <p><strong>E-mail</strong><span>info@kafecentrum.cz</span></p>
               <p><strong>Adresa</strong><span>Jesenická 1198/7a, Šumperk</span></p>
               <p><strong>Otevírací doba</strong><span>po domluvě</span></p>
@@ -68,40 +71,13 @@
             </div>
           </div>
 
-          <form class="kc-form reveal" data-form>
-            <p class="kc-form-note">Formulář je připravený jako statická část webu bez serverového odesílání.</p>
-            <label>
-              Jméno
-              <input type="text" name="jmeno" autocomplete="name" required />
-            </label>
-            <label>
-              E-mail
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-            <label>
-              Telefon
-              <input type="tel" name="telefon" autocomplete="tel" />
-            </label>
-            <label>
-              Typ poptávky
-              <select name="typ-poptavky" required>
-                <option value="">Vyberte možnost</option>
-                <option>Kávovar</option>
-                <option>Servis kávovaru</option>
-                <option>Káva a čaje</option>
-                <option>Vendingový automat</option>
-                <option>Vodomat</option>
-                <option>Servis / sanitace</option>
-                <option>Jiné</option>
-              </select>
-            </label>
-            <label class="kc-form-full">
-              Zpráva
-              <textarea name="zprava" rows="6" required></textarea>
-            </label>
-            <button class="kc-btn kc-btn-primary" type="submit">Odeslat poptávku</button>
-            <p class="form-status" data-form-status role="status"></p>
-          </form>
+          <div class="kc-call-card reveal">
+            <p class="kc-kicker">Rychlý kontakt</p>
+            <h2>Zavolejte nám</h2>
+            <a class="kc-call-number" href="tel:+420608774876">608 774 876</a>
+            <p>Domluvíme výběr kávovaru, servis, vending, vodomaty i návštěvu prodejny.</p>
+            <a class="kc-call-mail" href="mailto:info@kafecentrum.cz">info@kafecentrum.cz</a>
+          </div>
         </div>
       </section>
 

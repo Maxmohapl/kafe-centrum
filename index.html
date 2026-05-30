@@ -14,29 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=about-section-v1" />
   </head>
   <body class="kc-site kc-home">
     <header class="kc-header" data-header>
       <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM domů">
         <span class="kc-brand-mark" aria-hidden="true"><span></span></span>
-        <span class="kc-brand-text"><strong>KAFE CENTRUM</strong><small>Šumperk</small></span>
+        <span class="kc-brand-text"><strong>kafe centrum</strong><small>Šumperk</small></span>
       </a>
       <button class="kc-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span></span><span></span><span></span>
       </button>
       <nav class="kc-nav" id="site-nav" data-nav>
-        <a href="kavovary-a-kava.html">Kávovary</a>
-        <a href="kavovary-a-kava.html#kava">Káva a čaj</a>
-        <a href="vendingove-automaty.html">Vending</a>
+        <a aria-current="page" href="index.html">Domů</a>
+        <a href="kavovary-a-kava.html">Vše pro kávy</a>
+        <a href="kava.html">Káva</a>
+        <a href="vendingove-automaty.html">Vendingové automaty</a>
         <a href="vodomaty.html">Vodomaty</a>
-        <a href="kavovary-a-kava.html#servis">Servis</a>
-        <a href="#sluzby">O nás</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
       <div class="kc-header-actions">
         <a class="kc-phone" href="tel:+420608774876">608 774 876</a>
-        <a class="kc-header-cta" href="kontakt.html#poptavka">Poptat nabídku</a>
       </div>
     </header>
 
@@ -51,23 +49,23 @@
             čistící prostředky.
           </p>
           <div class="kc-actions">
-            <a class="kc-btn kc-btn-primary" href="kontakt.html#poptavka">Poptat nabídku</a>
+            <a class="kc-btn kc-btn-primary" href="tel:+420608774876">608 774 876</a>
             <a class="kc-btn kc-btn-secondary" href="#sluzby">Naše služby</a>
             <a class="kc-btn kc-btn-light" href="kavovary-a-kava.html">Prohlédnout produkty</a>
           </div>
           <div class="kc-hero-features" aria-label="Hlavní výhody">
             <div>
-              <span aria-hidden="true" class="kc-feature-icon kc-feature-coffee"></span>
+              <img class="kc-feature-icon" src="assets/feature-coffee.jpg" alt="" aria-hidden="true" />
               <strong>Prémiová káva</strong>
               <small>a špičková kvalita</small>
             </div>
             <div>
-              <span aria-hidden="true" class="kc-feature-icon kc-feature-service"></span>
+              <img class="kc-feature-icon" src="assets/feature-service.jpg" alt="" aria-hidden="true" />
               <strong>Pravidelný servis</strong>
               <small>a rychlá podpora</small>
             </div>
             <div>
-              <span aria-hidden="true" class="kc-feature-icon kc-feature-water"></span>
+              <img class="kc-feature-icon" src="assets/feature-water.jpg" alt="" aria-hidden="true" />
               <strong>Sanitace a filtrace</strong>
               <small>pro čistou vodu</small>
             </div>
@@ -75,68 +73,159 @@
         </div>
       </section>
 
-      <section class="kc-trusted" aria-label="Důvěřují nám">
-        <p>Důvěřují nám</p>
-        <div>
-          <span>ŠKODA</span>
-          <span>Česká pošta</span>
-          <span>KB</span>
-          <span>ČSOB</span>
-          <span>Johnson &amp; Johnson</span>
-          <span>Ricoh</span>
+      <section class="kc-brands-bar" aria-label="Prodáváme">
+        <button class="kc-brands-group" type="button" aria-pressed="false" data-brand-button>
+          <img class="kc-brands-icon" src="assets/brand-beans.png" alt="" aria-hidden="true" />
+          <span class="kc-brands-label">Prodáváme kávu</span>
+          <span class="kc-brands-list" aria-label="Lu Caffé, Mäder, Coffee Limit">
+            <span>Lu Caffé</span>
+            <span>Mäder</span>
+            <span>Coffee Limit</span>
+          </span>
+        </button>
+        <button class="kc-brands-group" type="button" aria-pressed="false" data-brand-button>
+          <img class="kc-brands-icon" src="assets/brand-machine.png" alt="" aria-hidden="true" />
+          <span class="kc-brands-label">Prodáváme kávovary</span>
+          <span class="kc-brands-list" aria-label="Jura, Nivona, DR Coffee">
+            <span>Jura</span>
+            <span>Nivona</span>
+            <span>DR Coffee</span>
+          </span>
+        </button>
+      </section>
+
+      <section class="kc-section kc-section-cream kc-about-section" id="onas">
+        <div class="kc-about-layout">
+          <div class="kc-section-heading kc-section-heading-left reveal">
+            <p class="kc-kicker">O nás</p>
+            <h2>Jsme tu pro Vás od roku 2003</h2>
+            <div class="kc-about-divider"></div>
+            <p>
+              Přinášíme Vám naše služby, naše produkty, naši ochotu a snahu,
+              aby jste od nás vždy odcházeli spokojeni a rádi se k nám opět
+              vraceli. Naším mottem je staré, dobré „Náš zákazník, náš pán…".
+            </p>
+          </div>
+          <div class="kc-about-visual reveal">
+            <img class="kc-about-photo" src="assets/prodejna-kafe-centrum.png" alt="Prodejna KAFE CENTRUM v Šumperku – kávovary, káva a doplňky">
+            <div class="kc-about-overlay-card">
+              <div class="kc-about-overlay-item">
+                <svg class="kc-about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+                <p>Zabýváme se prodejem velice kvalitních kávovarů a jejich příslušenství a také jejich servisem a opravami.</p>
+              </div>
+              <div class="kc-about-overlay-item">
+                <svg class="kc-about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+                <p>Dovážíme pro Vás výběrovou kávu praženou ve Švýcarsku, za jejíž kvalitu, po dlouholetých zkušenostech, ručíme.</p>
+              </div>
+              <div class="kc-about-overlay-item">
+                <svg class="kc-about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+                <p>Rozvoz balené pramenité vody pro firmy i domácnosti.</p>
+              </div>
+              <div class="kc-about-overlay-item">
+                <svg class="kc-about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <p>Vzorková prodejna v Šumperku – přijďte ochutnat naší kávu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kc-about-points reveal" aria-label="Co děláme">
+          <div class="kc-about-point">
+            <svg class="kc-about-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+            <strong>Prodej a servis<br>kávovarů od roku 2003</strong>
+          </div>
+          <div class="kc-about-point">
+            <svg class="kc-about-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+            <strong>Výběrová káva<br>pražená ve Švýcarsku</strong>
+          </div>
+          <div class="kc-about-point">
+            <svg class="kc-about-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+            </svg>
+            <strong>Rozvoz balené<br>pramenité vody</strong>
+          </div>
+          <div class="kc-about-point">
+            <svg class="kc-about-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <strong>Vzorková prodejna<br>v Šumperku</strong>
+          </div>
         </div>
       </section>
 
-      <section class="kc-section" id="sluzby">
+      <section class="kc-section kc-section-services" id="sluzby">
         <div class="kc-section-heading reveal">
           <p class="kc-kicker">Co nabízíme</p>
-          <h2>Jedno servisní zázemí pro kávu, vending i vodu</h2>
+          <h2>Vyberte, co potřebujete řešit</h2>
         </div>
-        <div class="kc-card-grid kc-card-grid-three">
-          <article class="kc-service-card reveal">
-            <span>01</span>
-            <h3>Kávovary a káva</h3>
-            <p>
-              Prodej nových i repasovaných kávovarů značek Jura, Nivona a DR Coffee.
-              Nabízíme také servis, údržbu, filtry, čistící prostředky, kávu a čaje.
-            </p>
-            <a href="kavovary-a-kava.html">Zobrazit nabídku</a>
+        <div class="kc-service-showcase reveal" aria-label="Přehled služeb">
+          <article class="kc-service-panel">
+            <img class="kc-service-panel-image" src="assets/service-kavovary.png" alt="Kávovar" />
+            <div class="kc-service-actions" aria-label="Kávovary">
+              <button class="kc-service-action" type="button">
+                <span>Prodej kávovarů</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Servis kávovarů</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Filtry a čištění</span>
+              </button>
+            </div>
           </article>
-          <article class="kc-service-card reveal">
-            <span>02</span>
-            <h3>Vendingové automaty</h3>
-            <p>
-              Dodáváme, provozujeme a servisujeme vendingové automaty Bianchi na kávu,
-              nápoje i občerstvení.
-            </p>
-            <a href="vendingove-automaty.html">Řešení pro firmy</a>
+          <article class="kc-service-panel">
+            <img class="kc-service-panel-image" src="assets/service-kava-caj.png" alt="Káva a čaj" />
+            <div class="kc-service-actions" aria-label="Káva a čaj">
+              <button class="kc-service-action" type="button">
+                <span>Prodej kávy</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Prodej čaje</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Doplňky k přípravě</span>
+              </button>
+            </div>
           </article>
-          <article class="kc-service-card reveal">
-            <span>03</span>
-            <h3>Vodomaty</h3>
-            <p>
-              Prodáváme a servisujeme vodomaty, dodáváme přírodní pramenitou vodu
-              Aqua Pro Active a provádíme pravidelnou sanitaci.
-            </p>
-            <a href="vodomaty.html">Pitný režim a servis</a>
+          <article class="kc-service-panel">
+            <img class="kc-service-panel-image" src="assets/service-vending.png" alt="Vendingový automat" />
+            <div class="kc-service-actions" aria-label="Vendingové stroje">
+              <button class="kc-service-action" type="button">
+                <span>Prodej automatů</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Provoz automatů</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Servis vendingu</span>
+              </button>
+            </div>
           </article>
-        </div>
-      </section>
-
-      <section class="kc-section kc-section-cream">
-        <div class="kc-section-heading reveal">
-          <p class="kc-kicker">Značky</p>
-          <h2>Pracujeme s ověřenými značkami</h2>
-        </div>
-        <div class="kc-brand-strip reveal" aria-label="Značky">
-          <span>Jura</span>
-          <span>Nivona</span>
-          <span>DR Coffee</span>
-          <span>Bianchi</span>
-          <span>Lu Caffé</span>
-          <span>Mäder</span>
-          <span>Coffee Limit</span>
-          <span>Aqua Pro Active</span>
+          <article class="kc-service-panel">
+            <img class="kc-service-panel-image" src="assets/service-vodomaty.png" alt="Vodomat" />
+            <div class="kc-service-actions" aria-label="Vodomaty">
+              <button class="kc-service-action" type="button">
+                <span>Prodej vodomatů</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Servis vodomatů</span>
+              </button>
+              <button class="kc-service-action" type="button">
+                <span>Sanitace a filtrace</span>
+              </button>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -144,29 +233,29 @@
         <div class="kc-split">
           <div class="kc-section-heading kc-section-heading-left reveal">
             <p class="kc-kicker">Proč si vybrat nás</p>
-            <h2>Praktické řešení pro každodenní provoz</h2>
+            <h2>Kompletní zázemí pro váš provoz</h2>
             <p>
-              Pomáháme zákazníkům vybrat zařízení, pravidelně ho udržovat a doplňovat
-              sortiment tak, aby káva, voda i občerstvení fungovaly bez zbytečných starostí.
+              Od výběru zařízení přes dodání sortimentu až po servis. Postaráme se
+              o kávu, vodu i občerstvení tak, aby vše fungovalo jednoduše a spolehlivě.
             </p>
           </div>
           <div class="kc-benefit-list reveal">
-            <span>Nové i repasované stroje</span>
-            <span>Vlastní servis a pravidelná údržba</span>
-            <span>Dodávka kávy, čajů, filtrů a čistící chemie</span>
+            <span>Nové i repasované kávovary a vendingové automaty</span>
+            <span>Servis, údržba a pravidelná péče o zařízení</span>
+            <span>Káva, čaje, filtry, chemie i další sortiment</span>
             <span>Řešení pro firmy, provozovny, kanceláře i domácnosti</span>
-            <span>Zkušenosti s provozem vendingových automatů na více lokalitách</span>
+            <span>Praxe s nápojovým a vendingovým servisem</span>
           </div>
         </div>
       </section>
 
       <section class="kc-cta reveal">
         <div>
-          <p class="kc-kicker">Nezávazná poptávka</p>
-          <h2>Potřebujete kávovar, vending nebo vodomat?</h2>
-          <p>Navrhneme vám řešení podle prostoru, počtu lidí, provozu a rozpočtu.</p>
+          <p class="kc-kicker">Zavolejte nám</p>
+          <h2>Máte zájem o naše služby nebo prodávané zboží?</h2>
+          <p>Rádi vám poradíme s výběrem kávovaru, příslušenství, kávy i dalšího sortimentu. Ozvěte se nám a společně najdeme řešení, které bude dávat smysl pro váš provoz, firmu nebo domácnost.</p>
         </div>
-        <a class="kc-btn kc-btn-primary" href="kontakt.html#poptavka">Nezávazná poptávka</a>
+        <a class="kc-btn kc-btn-primary" href="tel:+420608774876">608 774 876</a>
       </section>
     </main>
 
@@ -174,6 +263,6 @@
       <p><strong>KAFE CENTRUM</strong> | prodej, servis a provoz nápojových řešení</p>
       <p>© <span data-year></span> KAFE CENTRUM. Všechna práva vyhrazena.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=service-image-cards"></script>
   </body>
 </html>

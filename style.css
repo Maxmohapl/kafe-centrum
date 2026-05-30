@@ -2242,7 +2242,8 @@ textarea:focus {
 }
 
 .kc-header-cta,
-.kc-btn-primary {
+.kc-btn-primary,
+.kc-btn.kc-btn-primary {
   color: #ffffff;
   background: linear-gradient(135deg, var(--kc-brown), var(--kc-brown-dark));
   box-shadow: 0 14px 28px rgba(77, 52, 39, 0.22);
@@ -5705,5 +5706,2854 @@ textarea:focus {
 
   .kc-repas-badge-text {
     font-size: 12px;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SERVIS KÁVOVARŮ — kavovary-a-kava.html
+══════════════════════════════════════════════════════════════ */
+
+/* ── Section wrapper ────────────────────────────────────────── */
+
+.kc-svp {
+  padding: 48px clamp(20px, 5vw, 72px) 56px;
+  background: #f5ede0;
+}
+
+.kc-svp-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* ── Top grid: left intro + right timeline ─────────────────── */
+
+.kc-svp-top {
+  display: grid;
+  grid-template-columns: 56fr 44fr;
+  gap: clamp(24px, 4vw, 52px);
+  align-items: stretch;
+}
+
+/* ── LEFT: label ────────────────────────────────────────────── */
+
+.kc-svp-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.kc-svp-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.kc-svp-label-text {
+  color: #c0891e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.kc-svp-label-line {
+  display: block;
+  width: 48px;
+  height: 1.5px;
+  background: #c0891e;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── LEFT: heading ──────────────────────────────────────────── */
+
+.kc-svp-heading {
+  margin: 0 0 12px;
+  color: #2a1812;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.75rem, 2.6vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+}
+
+/* ── LEFT: paragraph ────────────────────────────────────────── */
+
+.kc-svp-desc {
+  margin: 0 0 18px;
+  color: #5c4a40;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* ── LEFT: pill badges ──────────────────────────────────────── */
+
+.kc-svp-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.kc-svp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 42px;
+  padding: 0 16px;
+  background: #fff8f0;
+  border: 1px solid rgba(60, 35, 20, 0.13);
+  border-radius: 100px;
+  color: #2a1812;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(42, 24, 18, 0.06);
+}
+
+.kc-svp-badge svg {
+  color: #c0891e;
+  flex-shrink: 0;
+}
+
+/* ── LEFT: photo ────────────────────────────────────────────── */
+
+.kc-svp-photo {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 48px rgba(42, 24, 18, 0.16);
+  border: 1px solid rgba(42, 24, 18, 0.07);
+  min-height: 160px;
+}
+
+.kc-svp-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── RIGHT: vertical timeline ───────────────────────────────── */
+
+.kc-svp-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.kc-svp-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Vertical connecting line — spans between first and last circle center */
+.kc-svp-steps::before {
+  content: "";
+  position: absolute;
+  /* circle center = card padding-left (20px) + circle radius (28px) = 48px */
+  left: 48px;
+  /* top: center of first circle = card padding (20px) + radius (28px) = 48px */
+  top: 48px;
+  /* bottom: center of last circle = same from bottom */
+  bottom: 48px;
+  width: 1.5px;
+  background: linear-gradient(
+    to bottom,
+    rgba(192, 137, 30, 0.7) 0%,
+    rgba(192, 137, 30, 0.7) 75%,
+    rgba(192, 137, 30, 0.08) 100%
+  );
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+.kc-svp-step-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 20px 20px 20px;
+  background: #fffcf6;
+  border: 1px solid rgba(60, 35, 20, 0.09);
+  border-radius: 18px;
+  box-shadow: 0 3px 14px rgba(42, 24, 18, 0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.kc-svp-step-card:hover {
+  box-shadow: 0 8px 24px rgba(42, 24, 18, 0.12);
+  transform: translateX(4px);
+}
+
+.kc-svp-step-num {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(192, 137, 30, 0.6);
+  background: rgba(192, 137, 30, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c0891e;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kc-svp-step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.kc-svp-step-body h3 {
+  margin: 0 0 4px;
+  color: #2a1812;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-svp-step-body p {
+  margin: 0;
+  color: #52403a;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+/* ── Service features: 4 compact cards ─────────────────────── */
+
+.kc-svp-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.kc-svp-fcard {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 13px 14px;
+  background: #fffcf6;
+  border: 1px solid rgba(60, 35, 20, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(42, 24, 18, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.kc-svp-fcard:hover {
+  box-shadow: 0 6px 20px rgba(42, 24, 18, 0.1);
+}
+
+.kc-svp-fcard-icon {
+  flex-shrink: 0;
+  color: #c0891e;
+  margin-top: 1px;
+}
+
+.kc-svp-fcard-body h4 {
+  margin: 0 0 3px;
+  color: #2a1812;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.kc-svp-fcard-body p {
+  margin: 0;
+  color: #5c4a40;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* ── CTA panel ─────────────────────────────────────────────── */
+
+.kc-svp-cta {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 24px;
+  background: #fffcf6;
+  border: 1px solid rgba(60, 35, 20, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(42, 24, 18, 0.08);
+}
+
+.kc-svp-cta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(192, 137, 30, 0.09);
+  border: 1px solid rgba(192, 137, 30, 0.24);
+  color: #c0891e;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.kc-svp-cta-body {
+  min-width: 0;
+}
+
+.kc-svp-cta-heading {
+  margin: 0 0 4px;
+  color: #2a1812;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-svp-cta-text {
+  margin: 0;
+  color: #5c4a40;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.kc-svp-cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.kc-svp-cta-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+/* Buttons */
+
+.kc-svp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.kc-svp-btn:hover {
+  transform: translateY(-2px);
+}
+
+.kc-svp-btn.kc-svp-btn-primary {
+  background: #2a1812;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(42, 24, 18, 0.3);
+}
+
+.kc-svp-btn-primary:hover {
+  box-shadow: 0 8px 22px rgba(42, 24, 18, 0.38);
+}
+
+.kc-svp-btn-secondary {
+  background: transparent;
+  color: #c0891e;
+  border: 1.5px solid #c0891e;
+  box-shadow: none;
+}
+
+.kc-svp-btn-secondary:hover {
+  background: rgba(192, 137, 30, 0.05);
+}
+
+/* Contact line */
+
+.kc-svp-cta-contact {
+  display: flex;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+.kc-svp-cta-contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #2a1812;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.kc-svp-cta-contact svg {
+  color: #c0891e;
+  flex-shrink: 0;
+}
+
+/* ── Responsive: tablet 1024px ──────────────────────────────── */
+
+@media (max-width: 1080px) {
+  .kc-svp-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .kc-svp-photo img {
+    height: 340px;
+  }
+
+  .kc-svp-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kc-svp-cta {
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .kc-svp-cta-actions {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .kc-svp-cta-btns {
+    flex-wrap: wrap;
+  }
+}
+
+/* ── Responsive: mobile 640px ───────────────────────────────── */
+
+@media (max-width: 640px) {
+  .kc-svp {
+    padding: 56px 18px 64px;
+  }
+
+  .kc-svp-inner {
+    gap: 36px;
+  }
+
+  .kc-svp-heading {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .kc-svp-badges {
+    gap: 7px;
+  }
+
+  .kc-svp-photo img {
+    height: 220px;
+  }
+
+  .kc-svp-right::before {
+    display: none;
+  }
+
+  .kc-svp-features {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-svp-cta {
+    grid-template-columns: 1fr;
+    padding: 20px 18px;
+  }
+
+  .kc-svp-cta-icon {
+    display: none;
+  }
+
+  .kc-svp-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .kc-svp-cta-btns {
+    flex-direction: column;
+  }
+
+  .kc-svp-btn {
+    justify-content: center;
+  }
+
+  .kc-svp-cta-contact {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .kc-svp-step-card {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .kc-svp-step-num {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FILTRY A CHEMIE — kavovary-a-kava.html
+══════════════════════════════════════════════════════════════ */
+
+.kc-flt {
+  padding: 96px clamp(20px, 5vw, 64px) 100px;
+  background: #f6efe4;
+}
+
+.kc-flt-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+
+.kc-flt-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kc-flt-label {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.kc-flt-label-line {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #bd8732;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.kc-flt-label-text {
+  color: #bd8732;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.kc-flt-heading {
+  margin: 0 0 20px;
+  color: #2a1812;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  max-width: 1100px;
+}
+
+.kc-flt-desc {
+  margin: 0;
+  color: #6f6258;
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 900px;
+}
+
+/* ── Main grid ──────────────────────────────────────────────── */
+
+.kc-flt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* ── Photo ──────────────────────────────────────────────────── */
+
+.kc-flt-photo {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(80, 50, 30, 0.08);
+  box-shadow: 0 18px 45px rgba(40, 25, 15, 0.09);
+}
+
+.kc-flt-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Category cards ─────────────────────────────────────────── */
+
+.kc-flt-cats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.kc-flt-cat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 20px;
+  background: #fffaf2;
+  border: 1px solid rgba(189, 135, 50, 0.22);
+  border-radius: 20px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kc-flt-cat:hover {
+  border-color: rgba(189, 135, 50, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(40, 25, 15, 0.09);
+}
+
+.kc-flt-cat-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: rgba(189, 135, 50, 0.08);
+  border: 1px solid rgba(189, 135, 50, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bd8732;
+}
+
+.kc-flt-cat-name {
+  flex: 1;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-flt-cat-arrow {
+  flex-shrink: 0;
+  color: #bd8732;
+  opacity: 0.65;
+}
+
+/* ── CTA panel ──────────────────────────────────────────────── */
+
+.kc-flt-cta {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 36px 44px;
+  background: #fff8ed;
+  border: 1px solid rgba(189, 135, 50, 0.35);
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kc-flt-cta-icon {
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #c08a35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(192, 138, 53, 0.32);
+}
+
+.kc-flt-cta-body {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.kc-flt-cta-heading {
+  margin: 0 0 10px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-flt-cta-text {
+  margin: 0;
+  color: #4f4038;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.kc-flt-cta-deco {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* ── Responsive: 1040px ─────────────────────────────────────── */
+
+@media (max-width: 1040px) {
+  .kc-flt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-flt-photo img {
+    min-height: 280px;
+    height: 280px;
+  }
+}
+
+/* ── Responsive: 768px ──────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .kc-flt {
+    padding: 60px clamp(18px, 5vw, 32px) 68px;
+  }
+
+  .kc-flt-inner {
+    gap: 36px;
+  }
+
+  .kc-flt-heading {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .kc-flt-desc {
+    font-size: 16px;
+  }
+
+  .kc-flt-cats {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-flt-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+    gap: 20px;
+  }
+
+  .kc-flt-cta-deco {
+    display: none;
+  }
+}
+
+/* ── Responsive: 480px ──────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .kc-flt-cat-name {
+    font-size: 1rem;
+  }
+
+  .kc-flt-cat-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .kc-flt-cat-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .kc-flt-cta-icon {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* PNG ikony v kategoriích */
+.kc-flt-cat-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* PNG ikona v CTA */
+.kc-flt-cta-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VENDING HERO — vendingove-automaty.html
+══════════════════════════════════════════════════════════════ */
+
+/* Page background with subtle grid */
+.kc-vending-page {
+  background:
+    linear-gradient(rgba(60, 35, 25, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60, 35, 25, 0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #f6efe4, #f2e8d8);
+  background-size: 48px 48px, 48px 48px, auto;
+}
+
+/* ── Hero wrapper ────────────────────────────────────────────── */
+
+.kc-vnd-hero {
+  padding: 0 clamp(20px, 4.5vw, 64px);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.kc-vnd-hero-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48fr 52fr;
+  gap: clamp(40px, 5.5vw, 88px);
+  align-items: center;
+  padding: 120px 0;
+}
+
+/* ── LEFT ────────────────────────────────────────────────────── */
+
+.kc-vnd-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Label */
+
+.kc-vnd-label-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.kc-vnd-label-text {
+  color: #24140f;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.kc-vnd-label-line {
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: #c69236;
+  border-radius: 2px;
+}
+
+/* Heading */
+
+.kc-vnd-heading {
+  margin: 0 0 28px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 5.8vw, 5.4rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+/* Lead */
+
+.kc-vnd-lead {
+  margin: 0 0 32px;
+  color: #6b5a50;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* Benefit pills */
+
+.kc-vnd-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 44px;
+}
+
+.kc-vnd-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 18px;
+  background: rgba(255, 250, 242, 0.85);
+  border: 1px solid rgba(80, 50, 30, 0.09);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(40, 20, 10, 0.06);
+  color: #24140f;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.kc-vnd-pill svg {
+  color: #c69236;
+  flex-shrink: 0;
+}
+
+/* CTA button */
+
+.kc-vnd-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 30px;
+  background: #24140f;
+  color: #c69236;
+  border-radius: 16px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(36, 20, 15, 0.28);
+}
+
+.kc-vnd-cta:hover {
+  background: #3a2418;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(36, 20, 15, 0.34);
+}
+
+/* ── RIGHT: photo + floating cards ──────────────────────────── */
+
+.kc-vnd-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kc-vnd-photo-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+}
+
+.kc-vnd-photo {
+  display: block;
+  width: 100%;
+  height: clamp(480px, 55vw, 720px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 32px;
+  box-shadow: 0 28px 64px rgba(36, 20, 15, 0.18);
+  background: #e8ddd0;
+}
+
+/* Floating cards */
+
+.kc-vnd-float {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #fffaf2;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(36, 20, 15, 0.14);
+  width: 230px;
+  pointer-events: none;
+}
+
+.kc-vnd-float-1 {
+  left: -20px;
+  top: 38%;
+}
+
+.kc-vnd-float-2 {
+  left: 24px;
+  top: calc(38% + 100px);
+}
+
+.kc-vnd-float-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kc-vnd-float-icon-dark {
+  background: #24140f;
+  color: #c69236;
+}
+
+.kc-vnd-float-icon-gold {
+  background: #c69236;
+  color: #fff;
+}
+
+.kc-vnd-float-text strong {
+  display: block;
+  color: #24140f;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+
+.kc-vnd-float-text p {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ── Responsive: tablet ─────────────────────────────────────── */
+
+@media (max-width: 1040px) {
+  .kc-vnd-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 80px 0;
+    gap: 48px;
+  }
+
+  .kc-vnd-right {
+    justify-content: center;
+  }
+
+  .kc-vnd-photo {
+    height: clamp(360px, 60vw, 560px);
+  }
+
+  .kc-vnd-float-1 {
+    left: 12px;
+    top: auto;
+    bottom: 130px;
+  }
+
+  .kc-vnd-float-2 {
+    left: 12px;
+    top: auto;
+    bottom: 24px;
+  }
+}
+
+/* ── Responsive: mobile ─────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .kc-vnd-hero {
+    min-height: auto;
+  }
+
+  .kc-vnd-hero-inner {
+    padding: 56px 0 48px;
+    gap: 36px;
+  }
+
+  .kc-vnd-heading {
+    font-size: clamp(2.4rem, 10vw, 3rem);
+  }
+
+  .kc-vnd-pills {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kc-vnd-cta {
+    width: 100%;
+    justify-content: center;
+    padding: 18px 24px;
+    font-size: 16px;
+  }
+
+  .kc-vnd-photo {
+    height: 340px;
+  }
+
+  .kc-vnd-float {
+    width: 190px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .kc-vnd-float-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .kc-vnd-float-text strong {
+    font-size: 14px;
+  }
+
+  .kc-vnd-float-text p {
+    font-size: 12px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VENDING BIANCHI SECTIONS — vendingove-automaty.html
+══════════════════════════════════════════════════════════════ */
+
+.kc-vb-wrap {
+  padding: 0 clamp(20px, 4.5vw, 64px) 96px;
+}
+
+.kc-vb-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Hlavní panel ────────────────────────────────────────────── */
+
+.kc-vb-panel {
+  display: block;
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 28px;
+  padding: clamp(28px, 3vw, 44px) clamp(28px, 4vw, 52px);
+  box-shadow: 0 4px 24px rgba(36, 20, 15, 0.06);
+}
+
+.kc-vb-panel-left {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kc-vb-panel-left .kc-vb-label {
+  justify-content: center;
+}
+
+.kc-vb-panel-left .kc-vb-benefits {
+  justify-content: center;
+}
+
+.kc-vb-panel-left .kc-vb-cta {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+/* Label */
+
+.kc-vb-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.kc-vb-label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c69236;
+  flex-shrink: 0;
+}
+
+.kc-vb-label-text {
+  color: #c69236;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Heading */
+
+.kc-vb-heading {
+  margin: 0 0 18px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* Text */
+
+.kc-vb-text {
+  margin: 0 0 28px;
+  color: #6b5a50;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Benefits */
+
+.kc-vb-benefits {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  row-gap: 12px;
+}
+
+.kc-vb-benefit {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 18px;
+  color: #24140f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kc-vb-benefit:first-child {
+  padding-left: 0;
+}
+
+.kc-vb-benefit svg {
+  color: #c69236;
+  flex-shrink: 0;
+}
+
+.kc-vb-benefit-sep {
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: rgba(60, 35, 25, 0.18);
+  flex-shrink: 0;
+}
+
+/* CTA */
+
+.kc-vb-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 26px;
+  background: #24140f;
+  color: #fff;
+  border-radius: 12px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.18s ease;
+  box-shadow: 0 6px 18px rgba(36, 20, 15, 0.26);
+}
+
+.kc-vb-cta:hover {
+  background: #3a2418;
+  transform: translateY(-2px);
+}
+
+/* Photo */
+
+.kc-vb-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(36, 20, 15, 0.10);
+}
+
+/* ── Tři servisní karty ──────────────────────────────────────── */
+
+.kc-vb-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.kc-vb-scard {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 28px 26px;
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 20px;
+  box-shadow: 0 3px 12px rgba(36, 20, 15, 0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.kc-vb-scard:hover {
+  box-shadow: 0 8px 24px rgba(36, 20, 15, 0.10);
+  transform: translateY(-2px);
+}
+
+.kc-vb-scard-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(198, 146, 54, 0.09);
+  border: 1px solid rgba(198, 146, 54, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+}
+
+.kc-vb-scard-body h3 {
+  margin: 0 0 6px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-vb-scard-body p {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+/* ── Kde se vending využívá ──────────────────────────────────── */
+
+.kc-vb-usage {
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 28px;
+  padding: clamp(32px, 3.5vw, 52px);
+  box-shadow: 0 3px 14px rgba(36, 20, 15, 0.05);
+}
+
+.kc-vb-usage-heading {
+  margin: 0 0 32px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.kc-vb-usage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.kc-vb-ucard {
+  padding: 22px 20px;
+  background: #f6efe4;
+  border: 1px solid rgba(60, 35, 25, 0.08);
+  border-radius: 18px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.kc-vb-ucard:hover {
+  border-color: rgba(198, 146, 54, 0.35);
+  transform: translateY(-2px);
+}
+
+.kc-vb-ucard-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(198, 146, 54, 0.09);
+  border: 1px solid rgba(198, 146, 54, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+  margin-bottom: 14px;
+}
+
+.kc-vb-ucard h4 {
+  margin: 0 0 7px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-vb-ucard p {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+/* ── Responsive: 1024px ─────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .kc-vb-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-vb-photo {
+    aspect-ratio: 16 / 7;
+  }
+
+  .kc-vb-usage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Responsive: 640px ──────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .kc-vb-wrap {
+    padding-bottom: 60px;
+  }
+
+  .kc-vb-services {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-vb-usage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-vb-benefits {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kc-vb-benefit-sep {
+    display: none;
+  }
+
+  .kc-vb-benefit {
+    padding-left: 0;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   VENDING POBOČKA SHOWROOM — kc-vsp
+══════════════════════════════════════════════════════════════ */
+
+.kc-vsp {
+  padding: 96px clamp(20px, 4.5vw, 64px) 104px;
+  background: #f6efe4;
+}
+
+.kc-vsp-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 42fr 58fr;
+  gap: clamp(48px, 6vw, 88px);
+  align-items: start;
+}
+
+/* ── LEFT ────────────────────────────────────────────────────── */
+
+.kc-vsp-left {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 120px;
+}
+
+.kc-vsp-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.kc-vsp-label-text {
+  color: #24140f;
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.kc-vsp-label-line {
+  display: block;
+  width: 64px;
+  height: 2px;
+  background: #c69236;
+  border-radius: 2px;
+}
+
+.kc-vsp-heading {
+  margin: 0 0 24px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.4rem, 4.2vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.kc-vsp-desc {
+  margin: 0 0 36px;
+  color: #6b5a50;
+  font-size: 17.5px;
+  line-height: 1.68;
+  max-width: 520px;
+}
+
+/* Benefits */
+
+.kc-vsp-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-bottom: 42px;
+}
+
+.kc-vsp-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.kc-vsp-benefit-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #24140f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+}
+
+.kc-vsp-benefit-text strong {
+  display: block;
+  color: #24140f;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.kc-vsp-benefit-text p {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+/* CTA */
+
+.kc-vsp-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 19px 28px;
+  background: #24140f;
+  color: #c69236;
+  border-radius: 16px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(36, 20, 15, 0.26);
+  transition: background 0.2s ease, transform 0.18s ease;
+  align-self: flex-start;
+}
+
+.kc-vsp-cta:hover {
+  background: #3a2418;
+  transform: translateY(-2px);
+}
+
+/* ── RIGHT ───────────────────────────────────────────────────── */
+
+.kc-vsp-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Photo */
+
+.kc-vsp-photo-wrap {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 52px rgba(36, 20, 15, 0.12);
+}
+
+.kc-vsp-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Info card */
+
+.kc-vsp-infocard {
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 24px;
+  padding: 28px 30px;
+}
+
+.kc-vsp-infocard-label {
+  margin: 0 0 18px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.kc-vsp-infocard-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.kc-vsp-infoitem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #24140f;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.kc-vsp-infoitem-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(198, 146, 54, 0.1);
+  border: 1px solid rgba(198, 146, 54, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+}
+
+/* Contact panel */
+
+.kc-vsp-contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background: #24140f;
+  border-radius: 22px;
+  padding: 28px 30px;
+}
+
+.kc-vsp-contact-col {
+  padding: 0 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kc-vsp-contact-col:first-child {
+  padding-left: 0;
+}
+
+.kc-vsp-contact-col:last-child {
+  border-right: none;
+}
+
+.kc-vsp-contact-icon {
+  color: #c69236;
+  margin-bottom: 10px;
+}
+
+.kc-vsp-contact-title {
+  margin: 0 0 5px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kc-vsp-contact-val {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.kc-vsp-contact-phone {
+  display: block;
+  color: #c69236;
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+/* ── Responsive: 1080px ─────────────────────────────────────── */
+
+@media (max-width: 1080px) {
+  .kc-vsp-inner {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .kc-vsp-left {
+    position: static;
+  }
+
+  .kc-vsp-infocard-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Responsive: 640px ──────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .kc-vsp {
+    padding: 60px 18px 68px;
+  }
+
+  .kc-vsp-heading {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .kc-vsp-photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .kc-vsp-infocard-items {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-vsp-contact {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 22px;
+  }
+
+  .kc-vsp-contact-col {
+    padding: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 24px;
+  }
+
+  .kc-vsp-contact-col:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* Zvýrazněný benefit — servis */
+.kc-vsp-benefit-icon-gold {
+  background: #c69236;
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LOKALITY — vendingove-automaty.html
+══════════════════════════════════════════════════════════════ */
+
+.kc-loc {
+  padding: 92px clamp(20px, 4.5vw, 64px) 100px;
+  background: #f6efe4;
+}
+
+.kc-loc-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+/* ── Intro ───────────────────────────────────────────────────── */
+
+.kc-loc-intro {
+  max-width: 760px;
+}
+
+.kc-loc-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.kc-loc-label-text {
+  color: #24140f;
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.kc-loc-label-line {
+  display: block;
+  width: 52px;
+  height: 2px;
+  background: #c69236;
+  border-radius: 2px;
+}
+
+.kc-loc-heading {
+  margin: 0 0 20px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+.kc-loc-desc {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* ── Cards grid ──────────────────────────────────────────────── */
+
+.kc-loc-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.kc-loc-card {
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.08);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(36, 20, 15, 0.07);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.kc-loc-card:hover {
+  box-shadow: 0 12px 36px rgba(36, 20, 15, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Photo */
+
+.kc-loc-photo-wrap {
+  position: relative;
+}
+
+.kc-loc-photo {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.kc-loc-card-main .kc-loc-photo {
+  height: 320px;
+}
+
+/* Icon badge on photo */
+
+.kc-loc-card-icon {
+  position: absolute;
+  bottom: -22px;
+  left: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #24140f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+  box-shadow: 0 4px 12px rgba(36, 20, 15, 0.22);
+  border: 2px solid #fffaf2;
+}
+
+/* Card body */
+
+.kc-loc-card-body {
+  padding: 36px 24px 24px;
+}
+
+.kc-loc-card-body h3 {
+  margin: 0 0 10px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-loc-card-body p {
+  margin: 0 0 18px;
+  color: #6b5a50;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* Badge */
+
+.kc-loc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(198, 146, 54, 0.09);
+  border: 1px solid rgba(198, 146, 54, 0.28);
+  border-radius: 100px;
+  color: #8a6020;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.kc-loc-badge svg {
+  color: #c69236;
+}
+
+/* ── Benefit panel ───────────────────────────────────────────── */
+
+.kc-loc-benefits {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 24px;
+  padding: 32px 36px;
+  gap: 0;
+  box-shadow: 0 3px 14px rgba(36, 20, 15, 0.05);
+}
+
+.kc-loc-bitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0 28px;
+}
+
+.kc-loc-bitem:first-child {
+  padding-left: 0;
+}
+
+.kc-loc-bitem:last-child {
+  padding-right: 0;
+}
+
+.kc-loc-bicon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(198, 146, 54, 0.09);
+  border: 1px solid rgba(198, 146, 54, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+}
+
+.kc-loc-bitem strong {
+  display: block;
+  color: #24140f;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.kc-loc-bitem p {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.kc-loc-bsep {
+  display: block;
+  width: 1px;
+  height: 56px;
+  background: rgba(60, 35, 25, 0.12);
+  flex-shrink: 0;
+}
+
+/* ── Responsive: 1024px ─────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .kc-loc-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kc-loc-card-main {
+    grid-column: span 2;
+  }
+
+  .kc-loc-card-main .kc-loc-photo {
+    height: 280px;
+  }
+
+  .kc-loc-benefits {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px;
+    padding: 28px;
+  }
+
+  .kc-loc-bsep {
+    display: none;
+  }
+
+  .kc-loc-bitem {
+    padding: 0;
+  }
+}
+
+/* ── Responsive: 640px ──────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .kc-loc {
+    padding: 60px 18px 68px;
+  }
+
+  .kc-loc-inner {
+    gap: 32px;
+  }
+
+  .kc-loc-heading {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .kc-loc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kc-loc-card-main {
+    grid-column: span 1;
+  }
+
+  .kc-loc-card-main .kc-loc-photo,
+  .kc-loc-photo {
+    height: 220px;
+  }
+
+  .kc-loc-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   KÁVA — kava.html
+══════════════════════════════════════════════════════════════ */
+
+/* ── Sdílené prvky ───────────────────────────────────────────── */
+
+.kc-kava-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.kc-kava-label-text {
+  color: #24140f;
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.kc-kava-label-line {
+  display: block;
+  width: 52px;
+  height: 2px;
+  background: #c69236;
+  border-radius: 2px;
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+
+.kc-kava-hero {
+  padding: 0 clamp(20px, 4.5vw, 64px);
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+}
+
+.kc-kava-hero-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+  padding: 100px 0;
+}
+
+.kc-kava-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.kc-kava-heading {
+  margin: 0 0 22px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.6rem, 4.8vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.kc-kava-lead {
+  margin: 0 0 28px;
+  color: #6b5a50;
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.kc-kava-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 36px;
+}
+
+.kc-kava-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  background: rgba(255, 250, 242, 0.9);
+  border: 1px solid rgba(80, 50, 30, 0.09);
+  border-radius: 12px;
+  color: #24140f;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.kc-kava-pill svg {
+  color: #c69236;
+}
+
+.kc-kava-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 18px 28px;
+  background: #24140f;
+  color: #c69236;
+  border-radius: 14px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(36, 20, 15, 0.26);
+  transition: background 0.2s ease, transform 0.18s ease;
+}
+
+.kc-kava-cta:hover {
+  background: #3a2418;
+  transform: translateY(-2px);
+}
+
+.kc-kava-hero-photo {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 22px 56px rgba(36, 20, 15, 0.15);
+}
+
+.kc-kava-hero-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Značky kávy ─────────────────────────────────────────────── */
+
+.kc-kava-brands-section {
+  padding: 88px clamp(20px, 4.5vw, 64px) 96px;
+  background: #f6efe4;
+}
+
+.kc-kava-brands-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.kc-kava-brands-header {
+  max-width: 680px;
+}
+
+.kc-kava-section-heading {
+  margin: 0 0 16px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.kc-kava-section-desc {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.kc-kava-brand-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.kc-kava-brand-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 28px;
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(36, 20, 15, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.kc-kava-brand-card:hover {
+  box-shadow: 0 10px 28px rgba(36, 20, 15, 0.11);
+  transform: translateY(-2px);
+}
+
+.kc-kava-brand-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(198, 146, 54, 0.09);
+  border: 1px solid rgba(198, 146, 54, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+}
+
+.kc-kava-brand-card h3 {
+  margin: 0;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.kc-kava-brand-card p {
+  margin: 0;
+  flex: 1;
+  color: #6b5a50;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.kc-kava-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(198, 146, 54, 0.09);
+  border: 1px solid rgba(198, 146, 54, 0.25);
+  border-radius: 100px;
+  color: #8a6020;
+  font-size: 12.5px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+/* ── Poradenství ─────────────────────────────────────────────── */
+
+.kc-kava-advice {
+  padding: 88px clamp(20px, 4.5vw, 64px) 96px;
+}
+
+.kc-kava-advice-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+}
+
+.kc-kava-advice-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0 36px;
+}
+
+.kc-kava-advice-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #24140f;
+  font-size: 15.5px;
+  font-weight: 500;
+}
+
+.kc-kava-advice-item svg {
+  color: #c69236;
+  flex-shrink: 0;
+}
+
+.kc-kava-advice-card {
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 0 6px 22px rgba(36, 20, 15, 0.07);
+}
+
+.kc-kava-advice-card-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: rgba(198, 146, 54, 0.09);
+  border: 1px solid rgba(198, 146, 54, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+  margin-bottom: 20px;
+}
+
+.kc-kava-advice-card h3 {
+  margin: 0 0 10px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.kc-kava-advice-card > p {
+  margin: 0 0 24px;
+  color: #6b5a50;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.kc-kava-advice-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(60, 35, 25, 0.09);
+}
+
+.kc-kava-advice-info p {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.kc-kava-advice-info strong {
+  color: #24140f;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.kc-kava-advice-info a {
+  color: #c69236;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .kc-kava-hero-inner,
+  .kc-kava-advice-inner {
+    grid-template-columns: 1fr;
+    padding: 80px 0;
+  }
+
+  .kc-kava-brand-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .kc-kava-hero {
+    min-height: auto;
+  }
+
+  .kc-kava-hero-inner {
+    padding: 56px 0 48px;
+  }
+
+  .kc-kava-heading {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .kc-kava-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   KÁVA A ČAJE — kava.html  (kc-ct-*)
+══════════════════════════════════════════════════════════════ */
+
+/* Shared container */
+.kc-ct-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4.5vw, 64px);
+}
+
+/* ── HERO ────────────────────────────────────────────────────── */
+
+.kc-ct-hero {
+  padding: 0 clamp(20px, 4.5vw, 64px);
+  display: flex;
+  align-items: center;
+}
+
+.kc-ct-hero-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  padding: 44px 0 52px;
+}
+
+.kc-ct-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.kc-ct-label {
+  color: #c69236;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.kc-ct-h1 {
+  margin: 0 0 18px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 3.6vw, 3.7rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 640px;
+  text-shadow: 2px 4px 18px rgba(36, 20, 15, 0.18);
+}
+
+/* Gold accent divider line */
+.kc-ct-accent-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  align-self: stretch;
+}
+
+.kc-ct-accent-line span {
+  flex: 1;
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, #c69236, rgba(198,146,54,0.2));
+  max-width: 180px;
+}
+
+.kc-ct-accent-line span:last-child {
+  background: linear-gradient(to left, rgba(198,146,54,0.1), transparent);
+  max-width: 80px;
+}
+
+.kc-ct-lead {
+  margin: 0;
+  color: #6b5a50;
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.62;
+  max-width: 520px;
+}
+
+/* Hero right */
+.kc-ct-hero-visual {
+  position: relative;
+}
+
+/* Přechod zleva přes fotku */
+.kc-ct-hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(
+    to right,
+    #f6efe4 0%,
+    rgba(246, 239, 228, 0.6) 22%,
+    transparent 46%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.kc-ct-hero-img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 56px rgba(36, 20, 15, 0.14);
+}
+
+/* Floating badge */
+.kc-ct-badge {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 192px;
+  padding: 18px 18px 20px;
+  background: linear-gradient(145deg, #2c1a0e, #1c0f07);
+  border-radius: 18px;
+  z-index: 2;
+  box-shadow: 0 10px 28px rgba(18, 9, 4, 0.35);
+}
+
+.kc-ct-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(198, 146, 54, 0.14);
+  border: 1px solid rgba(198, 146, 54, 0.3);
+  color: #c69236;
+  margin-bottom: 12px;
+}
+
+.kc-ct-badge strong {
+  display: block;
+  color: #c69236;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.kc-ct-badge p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* ── BRAND SECTION ───────────────────────────────────────────── */
+
+.kc-ct-brands {
+  padding: 0 0 96px;
+  background: #f6efe4;
+}
+
+/* Section divider */
+.kc-ct-section-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 52px clamp(20px, 4.5vw, 64px) 0;
+  margin-bottom: 40px;
+}
+
+.kc-ct-divline {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: rgba(198, 146, 54, 0.4);
+}
+
+.kc-ct-divlabel {
+  color: #24140f;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Brand cards — horizontal layout matching reference */
+.kc-ct-brand-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.kc-ct-brand-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(36, 20, 15, 0.06);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+  min-height: 300px;
+}
+
+.kc-ct-brand-card:hover {
+  box-shadow: 0 10px 32px rgba(36, 20, 15, 0.11);
+  transform: translateY(-2px);
+}
+
+/* Left: text column */
+.kc-ct-brand-text {
+  flex: 0 0 52%;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 20px 22px 24px;
+}
+
+.kc-ct-brand-name {
+  margin: 0 0 10px;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* Small gold dot */
+.kc-ct-brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c69236;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.kc-ct-brand-desc {
+  margin: 0;
+  flex: 1;
+  color: #6b5a50;
+  font-size: 14px;
+  line-height: 1.62;
+}
+
+/* Coffee beans at bottom of text column */
+.kc-ct-brand-beans {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: 0;
+}
+
+/* Right: product image column */
+.kc-ct-brand-visual {
+  flex: 0 0 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  background: linear-gradient(to bottom right, #fffaf2, #f3e9d8);
+  position: relative;
+}
+
+.kc-ct-pack-img {
+  display: block;
+  max-width: 100%;
+  max-height: 260px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(36, 20, 15, 0.16));
+  transition: transform 0.3s ease;
+}
+
+.kc-ct-brand-card:hover .kc-ct-pack-img {
+  transform: scale(1.04) translateY(-4px);
+}
+
+/* ── BOTTOM BOXES ────────────────────────────────────────────── */
+
+.kc-ct-bottom {
+  padding: 0 0 96px;
+}
+
+.kc-ct-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.kc-ct-box {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: #fffaf2;
+  border: 1px solid rgba(60, 35, 25, 0.09);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(36, 20, 15, 0.05);
+}
+
+/* Left box: store photo + body */
+.kc-ct-box-store {
+  flex-shrink: 0;
+  width: 130px;
+  align-self: stretch;
+}
+
+.kc-ct-store-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.kc-ct-box-body {
+  flex: 1;
+  padding: 24px 24px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kc-ct-box-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(198, 146, 54, 0.3);
+  background: rgba(198, 146, 54, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69236;
+  flex-shrink: 0;
+}
+
+.kc-ct-box-body h3 {
+  margin: 0;
+  color: #24140f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.kc-ct-box-body p {
+  margin: 0;
+  color: #6b5a50;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Tea decoration in right box */
+.kc-ct-box-tea {
+  flex-shrink: 0;
+  padding: 20px 20px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .kc-ct-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 72px 0 56px;
+  }
+
+  .kc-ct-hero {
+    min-height: auto;
+  }
+
+  .kc-ct-brand-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .kc-ct-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .kc-ct-h1 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .kc-ct-badge {
+    width: 160px;
+    top: 14px;
+    right: 14px;
+    padding: 14px 14px 16px;
+  }
+
+  .kc-ct-brand-grid {
+    max-width: 100%;
+  }
+
+  .kc-ct-brand-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .kc-ct-brand-text {
+    flex: none;
+    padding: 22px 20px 16px;
+  }
+
+  .kc-ct-brand-visual {
+    flex: none;
+    padding: 16px;
+    min-height: 200px;
+  }
+
+  .kc-ct-box-store {
+    width: 90px;
   }
 }

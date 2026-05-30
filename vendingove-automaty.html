@@ -14,145 +14,522 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=vending-v2" />
   </head>
-  <body class="kc-site">
+  <body class="kc-site kc-vending-page">
     <header class="kc-header" data-header>
       <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM domů">
         <span class="kc-brand-mark" aria-hidden="true"><span></span></span>
-        <span class="kc-brand-text"><strong>KAFE CENTRUM</strong><small>Šumperk</small></span>
+        <span class="kc-brand-text"><strong>kafe centrum</strong><small>Šumperk</small></span>
       </a>
       <button class="kc-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span></span><span></span><span></span>
       </button>
       <nav class="kc-nav" id="site-nav" data-nav>
         <a href="index.html">Domů</a>
-        <a href="kavovary-a-kava.html">Kávovary a káva</a>
+        <a href="kavovary-a-kava.html">Vše pro kávy</a>
+        <a href="kava.html">Káva</a>
         <a aria-current="page" href="vendingove-automaty.html">Vendingové automaty</a>
         <a href="vodomaty.html">Vodomaty</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <a class="kc-header-cta" href="kontakt.html#poptavka">Nezávazná poptávka</a>
+      <div class="kc-header-actions">
+        <a class="kc-phone" href="tel:+420608774876">608 774 876</a>
+      </div>
     </header>
 
     <main>
-      <section class="kc-page-hero kc-page-hero-vending">
-        <div class="reveal">
-          <p class="kc-kicker">Vendingové automaty</p>
-          <h1>Vendingové automaty na kávu i občerstvení</h1>
-          <p class="kc-lead">
-            Zajišťujeme prodej, provoz a servis vendingových automatů Bianchi.
-            Nabízíme automaty na kávu, nápoje i jídlo pro firmy, školy, provozovny,
-            čekárny a veřejná místa.
-          </p>
-          <div class="kc-actions">
-            <a class="kc-btn kc-btn-primary" href="kontakt.html#poptavka">Poptat vendingový automat</a>
+
+      <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+      <section class="kc-vnd-hero">
+        <div class="kc-vnd-hero-inner">
+
+          <!-- Levý sloupec -->
+          <div class="kc-vnd-left reveal">
+            <div class="kc-vnd-label-row">
+              <span class="kc-vnd-label-text">VENDINGOVÉ AUTOMATY</span>
+              <span class="kc-vnd-label-line" aria-hidden="true"></span>
+            </div>
+
+            <h1 class="kc-vnd-heading">Automaty na<br>kávu i občerstvení</h1>
+
+            <p class="kc-vnd-lead">Zajišťujeme prodej, provoz a servis vendingových automatů Bianchi. Nabízíme řešení pro firmy, školy, provozovny, čekárny i veřejná místa.</p>
+
+            <div class="kc-vnd-pills">
+              <span class="kc-vnd-pill">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                Prodej a servis
+              </span>
+              <span class="kc-vnd-pill">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Doplňování a provoz
+              </span>
+              <span class="kc-vnd-pill">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Firmy • školy • čekárny
+              </span>
+            </div>
+
+            <a class="kc-vnd-cta" href="kontakt.html">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Nezávazná poptávka
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
           </div>
-        </div>
-        <div class="kc-vending-visual reveal">
-          <img src="assets/vending-machine.png" alt="Ilustrace vendingového automatu" />
-        </div>
-      </section>
 
-      <section class="kc-section">
-        <div class="kc-section-heading reveal">
-          <p class="kc-kicker">Co nabízíme</p>
-          <h2>Vending pro každodenní provoz</h2>
-        </div>
-        <div class="kc-card-grid kc-card-grid-three">
-          <article class="kc-service-card reveal">
-            <h3>Kávové vendingové automaty</h3>
-            <p>Automaty na rychlou přípravu kávy, cappuccina, čokolády a dalších nápojů.</p>
-          </article>
-          <article class="kc-service-card reveal">
-            <h3>Vending na jídlo a občerstvení</h3>
-            <p>Automaty na snacky, balené potraviny, nápoje a doplňkový sortiment.</p>
-          </article>
-          <article class="kc-service-card reveal">
-            <h3>Provoz a servis</h3>
-            <p>Zajišťujeme doplňování, údržbu, opravy a pravidelný servis automatů.</p>
-          </article>
-        </div>
-      </section>
+          <!-- Pravý sloupec: foto + floating karty -->
+          <div class="kc-vnd-right reveal">
+            <div class="kc-vnd-photo-wrap">
+              <img
+                src="assets/vending automat.png"
+                alt="Vendingové automaty Bianchi na kávu a občerstvení"
+                class="kc-vnd-photo"
+              />
 
-      <section class="kc-section kc-section-cream">
-        <div class="kc-split kc-split-center">
-          <div class="kc-section-heading kc-section-heading-left reveal">
-            <p class="kc-kicker">Bianchi</p>
-            <h2>Vendingové automaty Bianchi</h2>
-            <p>
-              Pracujeme s vendingovými automaty Bianchi, které jsou vhodné pro kanceláře,
-              školy, firmy, výrobní provozy i veřejné prostory.
-            </p>
-            <div class="kc-chip-grid">
-              <span>spolehlivý provoz</span>
-              <span>vhodné pro časté používání</span>
-              <span>možnost kávy i občerstvení</span>
-              <span>servis a doplňování</span>
-              <span>řešení na míru podle lokality</span>
+              <!-- Floating karta 1 -->
+              <div class="kc-vnd-float kc-vnd-float-1">
+                <div class="kc-vnd-float-icon kc-vnd-float-icon-dark">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                    <line x1="6" y1="1" x2="6" y2="4"/>
+                    <line x1="10" y1="1" x2="10" y2="4"/>
+                    <line x1="14" y1="1" x2="14" y2="4"/>
+                  </svg>
+                </div>
+                <div class="kc-vnd-float-text">
+                  <strong>Káva</strong>
+                  <p>Kvalitní káva na dosah ruky</p>
+                </div>
+              </div>
+
+              <!-- Floating karta 2 -->
+              <div class="kc-vnd-float kc-vnd-float-2">
+                <div class="kc-vnd-float-icon kc-vnd-float-icon-gold">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  </svg>
+                </div>
+                <div class="kc-vnd-float-text">
+                  <strong>Snacky &amp; nápoje</strong>
+                  <p>Široký výběr pro každou chuť</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="kc-product-card kc-product-card-large reveal">
-            <h3>Bianchi</h3>
-            <p>Kávové, nápojové a snackové automaty pro stabilní provoz ve firmách i veřejných prostorech.</p>
-            <img src="assets/vending-machine.png" alt="Vendingový automat" />
+
+        </div>
+      </section>
+
+      <!-- ══ POBOČKA SHOWROOM ══════════════════════════════════════ -->
+      <section class="kc-vsp">
+        <div class="kc-vsp-inner">
+
+          <!-- Levý sloupec -->
+          <div class="kc-vsp-left reveal">
+            <div class="kc-vsp-label">
+              <span class="kc-vsp-label-text">PRODEJ A SERVIS</span>
+              <span class="kc-vsp-label-line" aria-hidden="true"></span>
+            </div>
+
+            <h2 class="kc-vsp-heading">Prodej a servis vendingových automatů na&nbsp;pobočce</h2>
+
+            <p class="kc-vsp-desc">Na pobočce Vám představíme vendingové automaty značky Bianchi a další ověřená řešení pro kávu, nápoje i občerstvení. Pomůžeme Vám vybrat vhodný automat podle typu provozu, počtu zákazníků a možností pravidelného doplňování, údržby i servisu. Zajišťujeme nejen prodej, ale také odborné poradenství, provoz a následnou servisní péči.</p>
+
+            <div class="kc-vsp-benefits">
+
+              <div class="kc-vsp-benefit">
+                <div class="kc-vsp-benefit-icon">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <div class="kc-vsp-benefit-text">
+                  <strong>Prodej na pobočce</strong>
+                  <p>Automaty si u nás můžete prohlédnout a konzultovat naživo.</p>
+                </div>
+              </div>
+
+              <div class="kc-vsp-benefit">
+                <div class="kc-vsp-benefit-icon">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="6"/>
+                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+                  </svg>
+                </div>
+                <div class="kc-vsp-benefit-text">
+                  <strong>Bianchi a další značky</strong>
+                  <p>Nabízíme kvalitní automaty prověřených výrobců.</p>
+                </div>
+              </div>
+
+              <div class="kc-vsp-benefit kc-vsp-benefit-highlight">
+                <div class="kc-vsp-benefit-icon kc-vsp-benefit-icon-gold">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                  </svg>
+                </div>
+                <div class="kc-vsp-benefit-text">
+                  <strong>Servis a provoz</strong>
+                  <p>Zajišťujeme pravidelné doplňování, údržbu i odborný servis.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <a class="kc-vsp-cta" href="kontakt.html">
+              Navštivte naši pobočku
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+          <!-- Pravý sloupec -->
+          <div class="kc-vsp-right reveal">
+
+            <!-- Hlavní fotka -->
+            <div class="kc-vsp-photo-wrap">
+              <img src="assets/vending automat.png" alt="Vendingové automaty Bianchi na pobočce Kafe Centrum Šumperk" class="kc-vsp-photo" />
+            </div>
+
+            <!-- Info karta: Na pobočce uvidíte -->
+            <div class="kc-vsp-infocard">
+              <p class="kc-vsp-infocard-label">Co Vám na pobočce nabídneme</p>
+              <div class="kc-vsp-infocard-items">
+                <div class="kc-vsp-infoitem">
+                  <div class="kc-vsp-infoitem-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  </div>
+                  <span>Prodej automatů</span>
+                </div>
+                <div class="kc-vsp-infoitem">
+                  <div class="kc-vsp-infoitem-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <span>Poradenství</span>
+                </div>
+                <div class="kc-vsp-infoitem">
+                  <div class="kc-vsp-infoitem-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  </div>
+                  <span>Servis</span>
+                </div>
+                <div class="kc-vsp-infoitem">
+                  <div class="kc-vsp-infoitem-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                  </div>
+                  <span>Doplňování a provoz</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tmavý kontaktní panel -->
+            <div class="kc-vsp-contact">
+              <div class="kc-vsp-contact-col">
+                <div class="kc-vsp-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <p class="kc-vsp-contact-title">Pobočka Šumperk</p>
+                <p class="kc-vsp-contact-val">Jesenická 1198/7a<br>787 01 Šumperk</p>
+              </div>
+              <div class="kc-vsp-contact-col">
+                <div class="kc-vsp-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <p class="kc-vsp-contact-title">Otevírací doba</p>
+                <p class="kc-vsp-contact-val">Po – Pá<br>8:00 – 16:30</p>
+              </div>
+              <div class="kc-vsp-contact-col">
+                <div class="kc-vsp-contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.61a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <p class="kc-vsp-contact-title">Prodej, servis i poradenství</p>
+                <a class="kc-vsp-contact-phone" href="tel:+420608774876">608 774 876</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section class="kc-section">
-        <div class="kc-section-heading reveal">
-          <p class="kc-kicker">Lokality</p>
-          <h2>Naše vendingové lokality</h2>
-          <p>
-            Vendingové automaty provozujeme na několika lokalitách. Staráme se
-            o pravidelné doplňování, servis a technickou údržbu, aby byl provoz vždy spolehlivý.
-          </p>
-        </div>
-        <div class="kc-location-grid">
-          <article class="kc-location-card reveal">
-            <span>Lokalita 1</span>
-            <h3>Kávový automat + snack automat</h3>
-            <p>Pravidelně doplňováno a servisováno</p>
-          </article>
-          <article class="kc-location-card reveal">
-            <span>Lokalita 2</span>
-            <h3>Kávový automat</h3>
-            <p>Pravidelné zásobování a servis</p>
-          </article>
-          <article class="kc-location-card reveal">
-            <span>Lokalita 3</span>
-            <h3>Automat na občerstvení</h3>
-            <p>Provozováno a udržováno firmou</p>
-          </article>
+      <!-- ══ BIANCHI PANEL ═════════════════════════════════════════ -->
+      <section class="kc-vb-wrap">
+        <div class="kc-vb-inner">
+
+          <!-- Hlavní karta: text vlevo + fotka vpravo -->
+          <div class="kc-vb-panel reveal">
+            <div class="kc-vb-panel-left">
+              <div class="kc-vb-label">
+                <span class="kc-vb-label-dot" aria-hidden="true"></span>
+                <span class="kc-vb-label-text">BIANCHI</span>
+              </div>
+              <h2 class="kc-vb-heading">Automaty Bianchi pro firmy, školy i veřejné prostory</h2>
+              <p class="kc-vb-text">Pracujeme s vendingovými automaty Bianchi, které jsou vhodné pro kanceláře, školy, výrobní firmy, čekárny i další frekventovaná místa. Zajistíme návrh řešení, instalaci, doplňování i pravidelný servis.</p>
+
+              <div class="kc-vb-benefits">
+                <div class="kc-vb-benefit">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Spolehlivý provoz</span>
+                </div>
+                <span class="kc-vb-benefit-sep" aria-hidden="true"></span>
+                <div class="kc-vb-benefit">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                  <span>Káva, nápoje i snacky</span>
+                </div>
+                <span class="kc-vb-benefit-sep" aria-hidden="true"></span>
+                <div class="kc-vb-benefit">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  <span>Servis a doplňování</span>
+                </div>
+              </div>
+
+              <a class="kc-vb-cta" href="kontakt.html">
+                Nezávazná poptávka
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Tři servisní karty -->
+          <div class="kc-vb-services">
+            <article class="kc-vb-scard reveal">
+              <div class="kc-vb-scard-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.07 4.93A10 10 0 0 1 22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 4.93 4.93"/>
+                  <line x1="12" y1="2" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <div class="kc-vb-scard-body">
+                <h3>Instalace</h3>
+                <p>Dodáme a zprovozníme automat přímo na místě.</p>
+              </div>
+            </article>
+
+            <article class="kc-vb-scard reveal">
+              <div class="kc-vb-scard-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <div class="kc-vb-scard-body">
+                <h3>Pravidelné doplňování</h3>
+                <p>Zajišťujeme průběžné zásobování podle potřeby.</p>
+              </div>
+            </article>
+
+            <article class="kc-vb-scard reveal">
+              <div class="kc-vb-scard-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div class="kc-vb-scard-body">
+                <h3>Servis a údržba</h3>
+                <p>Postaráme se o bezproblémový provoz i opravy.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Kde se vending využívá -->
+          <div class="kc-vb-usage reveal">
+            <h2 class="kc-vb-usage-heading">Kde se vending nejčastěji využívá?</h2>
+            <div class="kc-vb-usage-grid">
+
+              <div class="kc-vb-ucard">
+                <div class="kc-vb-ucard-icon">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  </svg>
+                </div>
+                <h4>Kanceláře</h4>
+                <p>Rychlé občerstvení a kvalitní káva pro zaměstnance i návštěvy.</p>
+              </div>
+
+              <div class="kc-vb-ucard">
+                <div class="kc-vb-ucard-icon">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  </svg>
+                </div>
+                <h4>Školy</h4>
+                <p>Oblíbené nápoje a snacky pro studenty i pedagogy po celý den.</p>
+              </div>
+
+              <div class="kc-vb-ucard">
+                <div class="kc-vb-ucard-icon">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <h4>Čekárny</h4>
+                <p>Pohodlí pro klienty při čekání na schůzku či vyšetření.</p>
+              </div>
+
+              <div class="kc-vb-ucard">
+                <div class="kc-vb-ucard-icon">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <h4>Výrobní firmy</h4>
+                <p>Energie a občerstvení pro zaměstnance během náročného dne.</p>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <section class="kc-section kc-section-cream">
-        <div class="kc-section-heading reveal">
-          <p class="kc-kicker">Vhodné provozy</p>
-          <h2>Pro koho je vending vhodný</h2>
-        </div>
-        <div class="kc-chip-grid kc-chip-grid-wide reveal">
-          <span>kanceláře</span>
-          <span>školy</span>
-          <span>výrobní firmy</span>
-          <span>čekárny</span>
-          <span>sportoviště</span>
-          <span>hotely a penziony</span>
-          <span>veřejné prostory</span>
-          <span>firemní areály</span>
+      <!-- ══ LOKALITY ══════════════════════════════════════════════ -->
+      <section class="kc-loc">
+        <div class="kc-loc-inner">
+
+          <!-- Intro -->
+          <div class="kc-loc-intro reveal">
+            <div class="kc-loc-label">
+              <span class="kc-loc-label-text">LOKALITY</span>
+              <span class="kc-loc-label-line" aria-hidden="true"></span>
+            </div>
+            <h2 class="kc-loc-heading">Kde najdete naše automaty</h2>
+            <p class="kc-loc-desc">Naše automaty provozujeme na vybraných místech v Šumperku a okolí. Zajišťujeme pravidelné doplňování sortimentu i spolehlivý servis.</p>
+          </div>
+
+          <!-- Karty lokalit -->
+          <div class="kc-loc-grid">
+
+            <article class="kc-loc-card kc-loc-card-main reveal">
+              <div class="kc-loc-photo-wrap">
+                <img src="assets/vending automat.png" alt="Vendingový automat v kancelářském prostředí" class="kc-loc-photo" />
+                <div class="kc-loc-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="kc-loc-card-body">
+                <h3>Kanceláře</h3>
+                <p>Nápojové a kombinované automaty s občerstvením. Pravidelně doplňujeme a zajišťujeme bezproblémový provoz.</p>
+                <span class="kc-loc-badge">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  Pravidelný servis
+                </span>
+              </div>
+            </article>
+
+            <article class="kc-loc-card reveal">
+              <div class="kc-loc-photo-wrap">
+                <img src="assets/prodejna-kafe-centrum.png" alt="Vendingový automat ve škole" class="kc-loc-photo" />
+                <div class="kc-loc-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="kc-loc-card-body">
+                <h3>Školy</h3>
+                <p>Automaty s nápoji a občerstvením pro studenty i zaměstnance školy. Pravidelně doplňujeme sortiment.</p>
+                <span class="kc-loc-badge">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  Doplňováno
+                </span>
+              </div>
+            </article>
+
+            <article class="kc-loc-card reveal">
+              <div class="kc-loc-photo-wrap">
+                <img src="assets/repasovanefoto.png" alt="Vendingový automat v čekárně" class="kc-loc-photo" />
+                <div class="kc-loc-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="kc-loc-card-body">
+                <h3>Čekárny</h3>
+                <p>Nápojové automaty pro pohodlí klientů a návštěvníků. Zajišťujeme pravidelný servis a doplňování.</p>
+                <span class="kc-loc-badge">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  Pravidelný servis
+                </span>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Benefit panel -->
+          <div class="kc-loc-benefits reveal">
+            <div class="kc-loc-bitem">
+              <div class="kc-loc-bicon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Pravidelné doplňování</strong>
+                <p>Zboží doplňujeme tak, aby nikdy nechybělo to, co máte rádi.</p>
+              </div>
+            </div>
+            <span class="kc-loc-bsep" aria-hidden="true"></span>
+            <div class="kc-loc-bitem">
+              <div class="kc-loc-bicon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Spolehlivý servis</strong>
+                <p>Rychlá reakce a technická podpora při jakémkoli problému.</p>
+              </div>
+            </div>
+            <span class="kc-loc-bsep" aria-hidden="true"></span>
+            <div class="kc-loc-bitem">
+              <div class="kc-loc-bicon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Působíme na více místech</strong>
+                <p>Naše automaty najdete ve firmách, školách i veřejných prostorech.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
+      <!-- ══ CTA ════════════════════════════════════════════════════ -->
       <section class="kc-cta reveal">
         <div>
           <p class="kc-kicker">Vending do provozu</p>
           <h2>Chcete vendingový automat do firmy nebo provozu?</h2>
           <p>Navrhneme vhodný typ automatu, sortiment i způsob provozu.</p>
         </div>
-        <a class="kc-btn kc-btn-primary" href="kontakt.html#poptavka">Navrhnout řešení</a>
+        <div class="kc-cta-actions">
+          <a class="kc-btn kc-btn-primary" href="tel:+420608774876">Zavolat pro radu</a>
+          <a class="kc-btn kc-btn-secondary" href="kontakt.html">Napsat nám</a>
+        </div>
       </section>
+
     </main>
 
     <footer class="kc-footer">
