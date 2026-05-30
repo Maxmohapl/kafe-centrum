@@ -9,8 +9,20 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+let lastScrollY = window.scrollY;
 const setHeaderState = () => {
-  header?.classList.toggle("is-scrolled", window.scrollY > 8);
+  const y = window.scrollY;
+  header?.classList.toggle("is-scrolled", y > 8);
+  if (header) {
+    if (y > lastScrollY && y > 140) {
+      // scrolling down — hide
+      header.classList.add("is-hidden");
+    } else if (y < lastScrollY - 4 || y <= 8) {
+      // scrolling up (or at the very top) — show
+      header.classList.remove("is-hidden");
+    }
+  }
+  lastScrollY = y;
 };
 
 setHeaderState();
@@ -50,3 +62,25 @@ const observer = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => observer.observe(item));
+
+// Fallback: some embedded/preview contexts never fire IntersectionObserver,
+// which would leave .reveal content stuck invisible. Reveal items as they
+// enter the viewport via scroll/load, and guarantee everything shows shortly
+// after load so content is never permanently hidden.
+const revealInView = () => {
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  revealItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < vh * 0.94 && rect.bottom > 0) {
+      item.classList.add("is-visible");
+    }
+  });
+};
+
+revealInView();
+window.addEventListener("load", () => {
+  revealInView();
+  setTimeout(revealInView, 250);
+});
+window.addEventListener("scroll", revealInView, { passive: true });
+setTimeout(() => revealItems.forEach((item) => item.classList.add("is-visible")), 1600);

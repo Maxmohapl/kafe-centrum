@@ -14,13 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=phone-contact-v1" />
+    <link rel="stylesheet" href="style.css?v=nav-2" />
   </head>
   <body class="kc-site kc-water-page">
     <header class="kc-header" data-header>
-      <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM domů">
-        <span class="kc-brand-mark" aria-hidden="true"><span></span></span>
-        <span class="kc-brand-text"><strong>kafe centrum</strong><small>Šumperk</small></span>
+      <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM Šumperk — domů">
+        <img class="kc-brand-logo" src="assets/logokafe.png" alt="KAFE CENTRUM" />
       </a>
       <button class="kc-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span></span><span></span><span></span>
@@ -39,44 +38,114 @@
     </header>
 
     <main>
-      <section class="kc-page-hero kc-page-hero-water">
-        <div class="reveal">
-          <p class="kc-kicker">Vodomaty</p>
-          <h1>Vodomaty Aqua Pro Active včetně servisu a sanitace</h1>
-          <p class="kc-lead">
-            Prodáváme a servisujeme vodomaty, dodáváme přírodní pramenitou vodu
-            Aqua Pro Active a zajišťujeme pravidelnou sanitaci zařízení pro bezpečný
-            a hygienický provoz.
-          </p>
-          <div class="kc-actions">
-            <a class="kc-btn kc-btn-primary" href="tel:+420608774876">608 774 876</a>
+
+      <!-- ══ HERO ═════════════════════════════════════════════════ -->
+      <section class="kc-wh-hero">
+
+        <!-- Levý sloupec: text -->
+        <div class="kc-wh-hero-left reveal">
+          <p class="kc-wh-label">Vodomaty</p>
+          <span class="kc-wh-label-line" aria-hidden="true"></span>
+
+          <h1 class="kc-wh-h1">
+            Vodomaty<br>
+            Aqua Pro Active<br>
+            <em>včetně servisu<br>a sanitace</em>
+          </h1>
+
+          <p class="kc-wh-lead">Prodáváme a servisujeme vodomaty, dodáváme přírodní pramenitou vodu Aqua Pro Active a zajišťujeme pravidelnou sanitaci zařízení pro bezpečný a hygienický provoz.</p>
+
+          <div class="kc-wh-pills">
+            <span class="kc-wh-pill">
+              <span class="kc-wh-pill-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </span>
+              prodej vodomatů
+            </span>
+            <span class="kc-wh-pill">
+              <span class="kc-wh-pill-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              servis a sanitace
+            </span>
+            <span class="kc-wh-pill">
+              <span class="kc-wh-pill-icon">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6 8 4 11 4 14a8 8 0 0 0 16 0c0-3-2-6-8-12z"/></svg>
+              </span>
+              dodávka vody
+            </span>
+          </div>
+
+          <div class="kc-wh-cta-row">
+            <a class="kc-wh-cta-btn" href="tel:+420608774876">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.13 1 .37 1.97.72 2.91a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l.99-.99a2 2 0 0 1 2.11-.45c.94.35 1.91.59 2.91.72A2 2 0 0 1 22 16.92z"/></svg>
+              608 774 876
+            </a>
+            <span class="kc-wh-trust">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Bezpečný a hygienický provoz
+            </span>
           </div>
         </div>
-        <div class="kc-water-visual reveal" aria-label="Vizuál vodomatu">
-          <span></span>
-          <strong>Aqua Pro Active</strong>
-          <small>voda • servis • sanitace</small>
+
+        <!-- Pravý sloupec: fotka + floating karta -->
+        <div class="kc-wh-hero-right" aria-hidden="true">
+          <img
+            src="assets/herovodomaty.png"
+            alt=""
+            class="kc-wh-img"
+          />
+          <div class="kc-wh-float-card">
+            <div class="kc-wh-float-card-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6 8 4 11 4 14a8 8 0 0 0 16 0c0-3-2-6-8-12z"/>
+              </svg>
+            </div>
+            <strong>Aqua Pro Active</strong>
+            <span class="kc-wh-float-card-line"></span>
+            <small>voda • servis • sanitace</small>
+          </div>
         </div>
+
       </section>
 
-      <section class="kc-section">
-        <div class="kc-section-heading reveal">
-          <p class="kc-kicker">Co nabízíme</p>
-          <h2>Pitný režim se servisem</h2>
-        </div>
-        <div class="kc-card-grid kc-card-grid-three">
-          <article class="kc-service-card reveal">
-            <h3>Prodej vodomatů</h3>
-            <p>Řešení pro kanceláře, provozovny, čekárny, ordinace i veřejné prostory.</p>
-          </article>
-          <article class="kc-service-card reveal">
-            <h3>Dodávka vody</h3>
-            <p>Pravidelně dodáváme přírodní pramenitou vodu Aqua Pro Active.</p>
-          </article>
-          <article class="kc-service-card reveal">
-            <h3>Servis a sanitace</h3>
-            <p>Zajišťujeme čištění, kontrolu a hygienickou údržbu zařízení.</p>
-          </article>
+      <!-- ══ KOMPLETNÍ PÉČE ════════════════════════════════════════ -->
+      <section class="kc-wh-services">
+        <div class="kc-wh-services-inner">
+          <div class="kc-wh-services-top reveal">
+            <p class="kc-wh-services-kicker">Co nabízíme</p>
+            <h2 class="kc-wh-services-heading">Kompletní péče</h2>
+          </div>
+          <div class="kc-wh-srv-grid">
+            <article class="kc-wh-srv-card reveal">
+              <div class="kc-wh-srv-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <h3>Prodej vodomatů</h3>
+              <p>Řešení pro kanceláře, provozovny, čekárny, ordinace i veřejné prostory.</p>
+            </article>
+            <article class="kc-wh-srv-card reveal">
+              <div class="kc-wh-srv-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3>Servis a sanitace</h3>
+              <p>Zajišťujeme čištění, kontrolu a hygienickou údržbu zařízení.</p>
+            </article>
+            <article class="kc-wh-srv-card reveal">
+              <div class="kc-wh-srv-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6 8 4 11 4 14a8 8 0 0 0 16 0c0-3-2-6-8-12z"/></svg>
+              </div>
+              <h3>Dodávka vody</h3>
+              <p>Pravidelně dodáváme přírodní pramenitou vodu Aqua Pro Active.</p>
+            </article>
+            <article class="kc-wh-srv-card reveal">
+              <div class="kc-wh-srv-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>Pravidelná péče</h3>
+              <p>Servisní plán pro stabilní hygienický provoz bez starostí.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -149,6 +218,6 @@
       <p><strong>KAFE CENTRUM</strong> | vodomaty Aqua Pro Active, servis a sanitace</p>
       <p>© <span data-year></span> KAFE CENTRUM. Všechna práva vyhrazena.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=nav-2"></script>
   </body>
 </html>
