@@ -6646,21 +6646,43 @@ textarea:focus {
 /* ── Hero wrapper ────────────────────────────────────────────── */
 
 .kc-vnd-hero {
-  padding: 0 clamp(18px, 5vw, 72px);
-  min-height: min(820px, calc(100vh - 78px));
+  --kc-vnd-nav-overlap: 75px;
+  position: relative;
+  min-height: clamp(720px, 100svh, 820px);
+  margin-top: calc(var(--kc-vnd-nav-overlap) * -1);
+  padding: 0;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, rgba(10, 12, 13, 0.16), rgba(10, 12, 13, 0.48)),
+    linear-gradient(90deg, rgba(10, 12, 13, 0.92) 0%, rgba(10, 12, 13, 0.78) 35%, rgba(10, 12, 13, 0.35) 62%, rgba(10, 12, 13, 0.1) 100%),
+    url("assets/vending-hero-background.png") center right / cover no-repeat;
+}
+
+.kc-vnd-hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 0;
+  height: 34%;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(10, 12, 13, 0), rgba(10, 12, 13, 0.54));
 }
 
 .kc-vnd-hero-inner {
-  max-width: 1380px;
+  position: relative;
+  z-index: 1;
+  max-width: 1420px;
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: 48fr 52fr;
-  gap: clamp(40px, 5.5vw, 88px);
+  grid-template-columns: minmax(0, 620px) minmax(300px, 1fr);
+  gap: clamp(44px, 6vw, 96px);
   align-items: center;
-  padding: 81px 0;
+  min-height: inherit;
+  padding: calc(clamp(78px, 6vw, 90px) + var(--kc-vnd-nav-overlap)) clamp(64px, 6vw, 96px) clamp(78px, 6vw, 90px);
 }
 
 /* ── LEFT ────────────────────────────────────────────────────── */
@@ -6669,6 +6691,7 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 620px;
 }
 
 /* Label */
@@ -6676,21 +6699,21 @@ textarea:focus {
 .kc-vnd-label-row {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
   margin-bottom: 28px;
 }
 
 .kc-vnd-label-text {
-  color: #24140f;
+  color: #c69236;
   font-size: 15px;
   font-weight: 800;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .kc-vnd-label-line {
   display: block;
-  width: 200px;
+  width: 150px;
   height: 2px;
   background: #c69236;
   border-radius: 2px;
@@ -6699,23 +6722,26 @@ textarea:focus {
 /* Heading */
 
 .kc-vnd-heading {
-  margin: 0 0 28px;
-  color: #24140f;
+  margin: 0;
+  max-width: 620px;
+  color: #f7f2e8;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(3rem, 5.8vw, 5.4rem);
+  font-size: clamp(4.5rem, 5.4vw, 5.2rem);
   font-weight: 800;
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-shadow: none;
+  text-transform: none;
 }
 
 /* Lead */
 
 .kc-vnd-lead {
-  margin: 0 0 32px;
-  color: #6b5a50;
-  font-size: clamp(16px, 1.4vw, 19px);
-  line-height: 1.7;
-  max-width: 520px;
+  margin: 28px 0 0;
+  color: rgba(247, 242, 232, 0.78);
+  font-size: clamp(18px, 1.35vw, 20px);
+  line-height: 1.65;
+  max-width: 560px;
 }
 
 /* Benefit pills */
@@ -6724,22 +6750,22 @@ textarea:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 44px;
+  margin-top: 34px;
 }
 
 .kc-vnd-pill {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  padding: 13px 18px;
-  background: rgba(255, 250, 242, 0.85);
-  border: 1px solid rgba(80, 50, 30, 0.09);
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(40, 20, 10, 0.06);
-  color: #24140f;
+  padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: #f7f2e8;
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
+  backdrop-filter: blur(8px);
 }
 
 .kc-vnd-pill svg {
@@ -6747,55 +6773,74 @@ textarea:focus {
   flex-shrink: 0;
 }
 
-/* CTA button */
+/* CTA buttons */
+
+.kc-vnd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 42px;
+}
 
 .kc-vnd-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 20px 30px;
-  background: #24140f;
+  min-height: 58px;
+  padding: 18px 30px;
+  border: 1px solid transparent;
   border-radius: 16px;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 800;
   text-decoration: none;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 24px rgba(36, 20, 15, 0.28);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.kc-site .kc-vnd-cta {
-  color: #c69236;
+.kc-vnd-cta-primary {
+  color: #111315;
+  background: linear-gradient(135deg, #d7a247, #c69236);
+  box-shadow: 0 14px 32px rgba(198, 146, 54, 0.28);
+}
+
+.kc-vnd-cta-secondary {
+  color: #f7f2e8;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(17, 19, 21, 0.34);
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+}
+
+.kc-site.kc-vending-page .kc-vnd-hero .kc-vnd-cta-primary {
+  color: #111315;
+}
+
+.kc-site.kc-vending-page .kc-vnd-hero .kc-vnd-cta-secondary {
+  color: #f7f2e8;
 }
 
 .kc-vnd-cta:hover {
-  background: #3a2418;
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(36, 20, 15, 0.34);
+}
+
+.kc-vnd-cta-primary:hover {
+  background: linear-gradient(135deg, #e2b65f, #cf9d44);
+  box-shadow: 0 18px 36px rgba(198, 146, 54, 0.34);
+}
+
+.kc-vnd-cta-secondary:hover {
+  border-color: rgba(198, 146, 54, 0.64);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* ── RIGHT: photo + floating cards ──────────────────────────── */
 
 .kc-vnd-right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.kc-vnd-photo-wrap {
   position: relative;
-  width: 100%;
-  max-width: 640px;
-}
-
-.kc-vnd-photo {
   display: block;
-  width: 100%;
-  height: clamp(480px, 55vw, 720px);
-  object-fit: cover;
-  object-position: center;
-  border-radius: 32px;
-  box-shadow: 0 28px 64px rgba(36, 20, 15, 0.18);
-  background: #e8ddd0;
+  min-height: 520px;
+  pointer-events: none;
 }
 
 /* Floating cards */
@@ -6806,21 +6851,23 @@ textarea:focus {
   align-items: center;
   gap: 14px;
   padding: 16px 20px;
-  background: #fffaf2;
-  border-radius: 20px;
-  box-shadow: 0 12px 32px rgba(36, 20, 15, 0.14);
   width: 230px;
+  color: #111315;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 20px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
   pointer-events: none;
 }
 
 .kc-vnd-float-1 {
-  left: -20px;
-  top: 38%;
+  right: clamp(120px, 12vw, 210px);
+  top: 40%;
 }
 
 .kc-vnd-float-2 {
-  left: 24px;
-  top: calc(38% + 100px);
+  right: clamp(32px, 5vw, 84px);
+  bottom: 18%;
 }
 
 .kc-vnd-float-icon {
@@ -6834,7 +6881,7 @@ textarea:focus {
 }
 
 .kc-vnd-float-icon-dark {
-  background: #24140f;
+  background: #111315;
   color: #c69236;
 }
 
@@ -6845,16 +6892,16 @@ textarea:focus {
 
 .kc-vnd-float-text strong {
   display: block;
-  color: #24140f;
+  color: #111315;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 3px;
 }
 
 .kc-vnd-float-text p {
   margin: 0;
-  color: #6b5a50;
+  color: #4e5358;
   font-size: 13px;
   line-height: 1.4;
 }
@@ -6862,30 +6909,31 @@ textarea:focus {
 /* ── Responsive: tablet ─────────────────────────────────────── */
 
 @media (max-width: 1040px) {
+  .kc-vnd-hero {
+    --kc-vnd-nav-overlap: 75px;
+    min-height: 720px;
+    background:
+      linear-gradient(180deg, rgba(10, 12, 13, 0.2), rgba(10, 12, 13, 0.58)),
+      linear-gradient(90deg, rgba(10, 12, 13, 0.94) 0%, rgba(10, 12, 13, 0.82) 48%, rgba(10, 12, 13, 0.28) 100%),
+      url("assets/vending-hero-background.png") center right / cover no-repeat;
+  }
+
   .kc-vnd-hero-inner {
     grid-template-columns: 1fr;
-    padding: 80px 0;
-    gap: 48px;
+    padding: calc(82px + var(--kc-vnd-nav-overlap)) clamp(32px, 6vw, 72px) 82px;
+    gap: 0;
+  }
+
+  .kc-vnd-left {
+    max-width: 600px;
+  }
+
+  .kc-vnd-heading {
+    font-size: clamp(3.625rem, 8vw, 4.25rem);
   }
 
   .kc-vnd-right {
-    justify-content: center;
-  }
-
-  .kc-vnd-photo {
-    height: clamp(360px, 60vw, 560px);
-  }
-
-  .kc-vnd-float-1 {
-    left: 12px;
-    top: auto;
-    bottom: 130px;
-  }
-
-  .kc-vnd-float-2 {
-    left: 12px;
-    top: auto;
-    bottom: 24px;
+    display: none;
   }
 }
 
@@ -6893,51 +6941,48 @@ textarea:focus {
 
 @media (max-width: 640px) {
   .kc-vnd-hero {
-    min-height: auto;
+    --kc-vnd-nav-overlap: 71px;
+    min-height: 680px;
+    background:
+      linear-gradient(180deg, rgba(10, 12, 13, 0.22), rgba(10, 12, 13, 0.62)),
+      linear-gradient(90deg, rgba(10, 12, 13, 0.94) 0%, rgba(10, 12, 13, 0.82) 58%, rgba(10, 12, 13, 0.2) 100%),
+      url("assets/vending-hero-background.png") 68% center / cover no-repeat;
   }
 
   .kc-vnd-hero-inner {
-    padding: 56px 0 48px;
-    gap: 36px;
+    padding: calc(58px + var(--kc-vnd-nav-overlap)) 20px 64px;
   }
 
   .kc-vnd-heading {
-    font-size: clamp(2.4rem, 10vw, 3rem);
+    font-size: clamp(2.625rem, 12vw, 3.125rem);
+  }
+
+  .kc-vnd-lead {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.62;
   }
 
   .kc-vnd-pills {
-    flex-direction: column;
     align-items: flex-start;
+    margin-top: 28px;
+  }
+
+  .kc-vnd-pill {
+    gap: 7px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .kc-vnd-actions {
+    width: 100%;
+    margin-top: 34px;
   }
 
   .kc-vnd-cta {
     width: 100%;
-    justify-content: center;
     padding: 18px 24px;
     font-size: 16px;
-  }
-
-  .kc-vnd-photo {
-    height: 340px;
-  }
-
-  .kc-vnd-float {
-    width: 190px;
-    padding: 12px 14px;
-    gap: 10px;
-  }
-
-  .kc-vnd-float-icon {
-    width: 38px;
-    height: 38px;
-  }
-
-  .kc-vnd-float-text strong {
-    font-size: 14px;
-  }
-
-  .kc-vnd-float-text p {
-    font-size: 12px;
   }
 }
 
@@ -7899,25 +7944,21 @@ textarea:focus {
   background-size: 48px 48px, 48px 48px, auto;
 }
 
-.kc-vending-page .kc-vnd-label-text,
 .kc-vending-page .kc-vsp-label-text,
 .kc-vending-page .kc-loc-label-text {
   color: var(--kc-vending-black);
 }
 
-.kc-vending-page .kc-vnd-label-line,
 .kc-vending-page .kc-vsp-label-line,
 .kc-vending-page .kc-loc-label-line,
 .kc-vending-page .kc-vb-label-dot {
   background: var(--kc-vending-accent);
 }
 
-.kc-vending-page .kc-vnd-heading,
 .kc-vending-page .kc-vsp-heading,
 .kc-vending-page .kc-vb-heading,
 .kc-vending-page .kc-vb-usage-heading,
 .kc-vending-page .kc-loc-heading,
-.kc-vending-page .kc-vnd-float-text strong,
 .kc-vending-page .kc-vsp-benefit-text strong,
 .kc-vending-page .kc-vsp-infocard-label,
 .kc-vending-page .kc-vsp-infoitem,
@@ -7933,8 +7974,6 @@ textarea:focus {
   text-shadow: none;
 }
 
-.kc-vending-page .kc-vnd-lead,
-.kc-vending-page .kc-vnd-float-text p,
 .kc-vending-page .kc-vsp-desc,
 .kc-vending-page .kc-vsp-benefit-text p,
 .kc-vending-page .kc-vb-text,
@@ -7946,8 +7985,6 @@ textarea:focus {
   color: var(--kc-vending-muted);
 }
 
-.kc-vending-page .kc-vnd-pill,
-.kc-vending-page .kc-vnd-float,
 .kc-vending-page .kc-vb-panel,
 .kc-vending-page .kc-vb-scard,
 .kc-vending-page .kc-vb-usage,
@@ -7970,14 +8007,9 @@ textarea:focus {
   background: #f7f8f9;
 }
 
-.kc-vending-page .kc-vnd-pill svg,
 .kc-vending-page .kc-vb-benefit svg,
 .kc-vending-page .kc-loc-badge svg {
   color: var(--kc-vending-accent);
-}
-
-.kc-vending-page .kc-vnd-pill {
-  color: var(--kc-vending-black);
 }
 
 .kc-vending-page .kc-vsp-contact-icon,
@@ -7987,8 +8019,6 @@ textarea:focus {
 
 .kc-vending-page .kc-vsp-benefit-icon,
 .kc-vending-page .kc-vsp-benefit-icon-gold,
-.kc-vending-page .kc-vnd-float-icon-dark,
-.kc-vending-page .kc-vnd-float-icon-gold,
 .kc-vending-page .kc-loc-card-icon {
   color: #f8fafc;
   background: var(--kc-vending-black);
@@ -8003,7 +8033,6 @@ textarea:focus {
   background: rgba(17, 20, 24, 0.06);
 }
 
-.kc-vending-page .kc-vnd-cta,
 .kc-vending-page .kc-vb-cta,
 .kc-vending-page .kc-vsp-cta,
 .kc-vending-page .kc-vsp-contact {
@@ -8011,13 +8040,11 @@ textarea:focus {
   box-shadow: 0 10px 26px rgba(17, 20, 24, 0.22);
 }
 
-.kc-vending-page .kc-vnd-cta:hover,
 .kc-vending-page .kc-vb-cta:hover,
 .kc-vending-page .kc-vsp-cta:hover {
   background: var(--kc-vending-deep);
 }
 
-.kc-site.kc-vending-page .kc-vnd-cta,
 .kc-site.kc-vending-page .kc-vb-cta,
 .kc-site.kc-vending-page .kc-vsp-cta {
   color: #ffffff;
@@ -8030,7 +8057,6 @@ textarea:focus {
   background: rgba(17, 20, 24, 0.06);
 }
 
-.kc-vending-page .kc-vnd-photo,
 .kc-vending-page .kc-vsp-photo-wrap,
 .kc-vending-page .kc-loc-photo-wrap {
   box-shadow: 0 18px 48px rgba(17, 20, 24, 0.13);
