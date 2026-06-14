@@ -7,16 +7,16 @@
       name="description"
       content="Kávovary, servis, káva, čaj, filtry a čisticí chemie na jednom místě. Nové i repasované kávovary Jura, Nivona a Dr. Coffee v Šumperku."
     />
-    <title>Káva, kávovary a servis | KAFE CENTRUM</title>
+    <title>Kávovary a servis | KAFE CENTRUM</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=nav-2" />
+    <link rel="stylesheet" href="style.css?v=hero-clear-1" />
   </head>
-  <body class="kc-site kc-coffee">
+  <body class="kc-site kc-coffee kc-machines-page">
     <header class="kc-header" data-header>
       <a class="kc-brand" href="index.html" aria-label="KAFE CENTRUM Šumperk — domů">
         <img class="kc-brand-logo" src="assets/logokafe.png" alt="KAFE CENTRUM" />
@@ -26,8 +26,8 @@
       </button>
       <nav class="kc-nav" id="site-nav" data-nav>
         <a href="index.html">Domů</a>
-        <a aria-current="page" href="kavovary-a-kava.html">Vše pro kávy</a>
-        <a href="kava.html">Káva</a>
+        <a aria-current="page" href="kavovary-a-kava.html">Kávovary</a>
+        <a href="kava.html">Káva a čaj</a>
         <a href="vendingove-automaty.html">Vendingové automaty</a>
         <a href="vodomaty.html">Vodomaty</a>
         <a href="kontakt.html">Kontakt</a>
@@ -74,7 +74,7 @@
 
 
       <!-- ══ 2. PREMIOVÉ ZNAČKY ═══════════════════════════════════════ -->
-      <section class="kc-pb">
+      <section class="kc-pb" id="kavovary">
         <div class="kc-pb-inner">
 
           <!-- Intro: label + heading + text (left) | showroom image (right) -->
@@ -116,6 +116,102 @@
               <p>Moderní řešení pro domácnosti i firmy, která nabízejí spolehlivý provoz a profesionální výsledek.</p>
             </article>
           </div>
+
+          <!-- Typy kávovarů -->
+          <section class="machine-types-section" id="typy-kavovaru" aria-labelledby="machine-types-heading">
+            <div class="machine-types-container">
+              <div class="machine-types-header reveal">
+                <div>
+                  <div class="kc-pb-label">
+                    <span class="kc-pb-label-text">Typy kávovarů</span>
+                    <span class="kc-pb-label-line" aria-hidden="true"></span>
+                  </div>
+                  <h2 class="machine-types-heading" id="machine-types-heading">Vyberte si kávovar podle svého stylu</h2>
+                </div>
+                <p class="machine-types-intro">
+                  Každý typ kávovaru má své výhody. Pomůžeme Vám vybrat řešení podle toho, jestli chcete mít přípravu kávy plně pod kontrolou, nebo preferujete rychlost, jednoduchost a pohodlí.
+                </p>
+              </div>
+
+              <div class="machine-types-grid">
+                <article class="machine-type-card reveal">
+                  <figure class="machine-type-image">
+                    <img src="assets/machine-type-pakove.jpg" alt="Pákový kávovar pro domácí přípravu espressa" />
+                  </figure>
+                  <div class="machine-type-content">
+                    <h3 class="machine-type-title">Pákové kávovary</h3>
+                    <p class="machine-type-description">Pro milovníky tradiční přípravy espressa, kteří chtějí mít chuť kávy více pod kontrolou.</p>
+                    <ul class="machine-type-benefits" aria-label="Výhody pákových kávovarů">
+                      <li>Plná kontrola nad přípravou</li>
+                      <li>Autentická chuť espressa</li>
+                      <li>Ideální pro domácí nadšence</li>
+                    </ul>
+                    <a class="machine-type-cta" href="kava.html#zrnkova-kava">
+                      Zobrazit vhodnou kávu
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="machine-type-card reveal">
+                  <figure class="machine-type-image">
+                    <img src="assets/machine-type-automaticke.jpg" alt="Automatický kávovar pro domácnost a kancelář" />
+                  </figure>
+                  <div class="machine-type-content">
+                    <h3 class="machine-type-title">Automatické kávovary</h3>
+                    <p class="machine-type-description">Pohodlné řešení pro každodenní přípravu kávy doma, v kanceláři i menším provozu.</p>
+                    <ul class="machine-type-benefits" aria-label="Výhody automatických kávovarů">
+                      <li>Jednoduché ovládání</li>
+                      <li>Rychlá příprava každý den</li>
+                      <li>Vhodné pro domácnost i kancelář</li>
+                    </ul>
+                    <a class="machine-type-cta" href="kava.html#zrnkova-kava">
+                      Zobrazit vhodnou kávu
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="machine-type-card reveal">
+                  <figure class="machine-type-image">
+                    <img src="assets/machine-type-kapslove.jpg" alt="Kapslový kávovar a kapsle" />
+                  </figure>
+                  <div class="machine-type-content">
+                    <h3 class="machine-type-title">Kapslové kávovary</h3>
+                    <p class="machine-type-description">Praktická volba pro rychlou a čistou přípravu kávy bez složité údržby.</p>
+                    <ul class="machine-type-benefits" aria-label="Výhody kapslových kávovarů">
+                      <li>Rychlá příprava bez nepořádku</li>
+                      <li>Široký výběr kapslí</li>
+                      <li>Snadná údržba</li>
+                    </ul>
+                    <a class="machine-type-cta" href="kava.html#kapsle">
+                      Zobrazit kapsle
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="machine-type-card reveal">
+                  <figure class="machine-type-image">
+                    <img src="assets/machine-type-ese.jpg" alt="E.S.E. pody pro přípravu espressa" />
+                  </figure>
+                  <div class="machine-type-content">
+                    <h3 class="machine-type-title">E.S.E. pody</h3>
+                    <p class="machine-type-description">Jednoduchá porcovaná příprava espressa s konzistentní chutí a minimem odpadu.</p>
+                    <ul class="machine-type-benefits" aria-label="Výhody E.S.E. podů">
+                      <li>Čistá a snadná příprava</li>
+                      <li>Konzistentní výsledek</li>
+                      <li>Kompatibilní s vybranými kávovary</li>
+                    </ul>
+                    <a class="machine-type-cta" href="kava.html#ese-pody">
+                      Zobrazit E.S.E. pody
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
 
           <!-- Repasované kávovary block -->
           <div class="kc-repas reveal" id="repas">

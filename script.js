@@ -4,6 +4,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const revealItems = document.querySelectorAll(".reveal");
 const year = document.querySelector("[data-year]");
 const brandButtons = document.querySelectorAll("[data-brand-button]");
+const placesCarousels = document.querySelectorAll("[data-places-carousel]");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -47,6 +48,34 @@ brandButtons.forEach((button) => {
     button.classList.toggle("is-active", !isActive);
     button.setAttribute("aria-pressed", String(!isActive));
   });
+});
+
+placesCarousels.forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll("[data-places-slide]"));
+  const prev = carousel.querySelector("[data-places-prev]");
+  const next = carousel.querySelector("[data-places-next]");
+  const current = carousel.querySelector("[data-places-current]");
+  const total = carousel.querySelector("[data-places-total]");
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+  if (!slides.length) return;
+
+  if (activeIndex < 0) activeIndex = 0;
+  if (total) total.textContent = String(slides.length);
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.classList.toggle("is-active", isActive);
+      slide.hidden = !isActive;
+    });
+    if (current) current.textContent = String(activeIndex + 1);
+  };
+
+  prev?.addEventListener("click", () => showSlide(activeIndex - 1));
+  next?.addEventListener("click", () => showSlide(activeIndex + 1));
+  showSlide(activeIndex);
 });
 
 const observer = new IntersectionObserver(
